@@ -1,0 +1,34 @@
+{
+  "groups": [{
+    "name": "The Grateful Dead",
+    "location": "San Francisco, CA",
+    "genre": ["Rock"],
+    "members": ["Ron 'Pigpen' McKernan", "Jerry Garcia", "Phil Lesh", "Bob Weir", "Bill Kreutzmann"],
+    "bio": "The Grateful Dead was an American rock band formed in 1965 in Palo Alto, California.[1][2] Ranging from quintet to septet, the band is known for its unique and eclectic style, which fused elements of rock, psychedelia, experimental music, modal jazz, country, folk, bluegrass, blues, reggae, and space rock,[3][4] for live performances of lengthy instrumental jams,[5][6] and for their devoted fan base, known as 'Deadheads'",
+    "lookingFor": ["Keyboard", "Drum"],
+    "available": true
+  }, {
+    "name": "The Magical Zimbaroos",
+    "location": "San Diego, CA",
+    "genre": ["Rock", "Folk"],
+    "members": ["Carl", " consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", " Ut enim ad minim veniam", " quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", "Excepteur sint occaecat cupidatat non proident", " sunt in culpa qui officia deserunt mollit anim id est laborum."],
+    "lookingFor": ["Acoustic Guitar", "Acoustic Bass"],
+    "available": true
+  }, {
+    "name": "Percussionists in New Orleans",
+    "location": "New Orleans, LA",
+    "genre": [""],
+    "members": ["Tim", " consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", " Ut enim ad minim veniam", " quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", "Excepteur sint occaecat cupidatat non proident", " sunt in culpa qui officia deserunt mollit anim id est laborum."],
+    "bio": "",
+    "lookingFor": [""],
+    "available": false
+  }, {
+    "name": "Poop",
+    "location": "Pee Pee Township, OH",
+    "genre": ["Comedy"],
+    "members": ["Mr. Poopy Poop", "Captain Pee Pee Pants"],
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "lookingFor": ["Theramin", "Gong"],
+    "available": true
+  }]
+}
