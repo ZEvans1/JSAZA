@@ -8,9 +8,9 @@ import { AlertModule } from 'ngx-bootstrap';
 
 //firebase imports
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { masterFirebaseConfig } from './api-keys';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { masterFirebaseConfig } from './../environments/api-keys';
 
 //main project imports (components and routing)
 import { routing } from './app.routing';
