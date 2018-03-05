@@ -1,4 +1,5 @@
 export class Artist {
+
   profileImage: string = "";
   profileGallery: string[] = [""];
 
