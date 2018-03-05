@@ -44,7 +44,7 @@
     "instruments": ["Theramin", "Bongos"],
     "genres": ["Folk", "Rock"],
     "bio": "I am Carl. I am from Carlsbad. I've been living at my parent's house my whole life recording music with a theramin and bongos. I hope to make it big someday in LA!",
-    "lookingFor": ["Acoustic Guitar", "Upright Bass", "Drums", "Mandolin", "Banjo"],
+    "lookingFor": ["Acoustic Guitar", "Upright Bass", "Drum", "Mandolin", "Banjo"],
     "available": true,
     "currentGroups": ["The Magical Zimbaroos"],
     "formerGroups": ["Cameleo"],
@@ -65,6 +65,43 @@
     "profileGallery": [""],
     "id": "test4"
   }, {
-
+    "name": "Michael Jackson",
+    "location": "Detroit, MI",
+    "instruments": ["Vocals", "Dancer"],
+    "genres": ["Pop"],
+    "bio": "Michael Joseph Jackson (August 29, 1958 – June 25, 2009) was an American singer, songwriter, and dancer. Dubbed the \"King of Pop\", he was one of the most popular entertainers in the world, and was the best-selling music artist during the year of his death.[1][2] Jackson's contributions to music, dance, and fashion[3][4][5] along with his publicized personal life made him a global figure in popular culture for over four decades.",
+    "lookingFor": ["Electric Guitar", "Bass Guitar", "Drum", "Keyboard", "Percussion"],
+    "available": false,
+    "currentGroups": [""],
+    "formerGroups": ["Jackson 5"],
+    "profileImage": "",
+    "profileGallery": [""],
+    "id": "test5"
+  }, {
+    "name": "Michael Jordan",
+    "location": "Wilmington, NC",
+    "instruments": [],
+    "genres": [""],
+    "bio": "",
+    "lookingFor": [""],
+    "available": false,
+    "currentGroups": [""],
+    "formerGroups": [""],
+    "profileImage": "",
+    "profileGallery": [""],
+    "id": "test6"
+  }, {
+    "name": "Dareat Ioeart",
+    "location": "Minneapolis, MN",
+    "instruments": ["Electric Guitar", "Saxophone"],
+    "genres": ["Funk", "Rock"],
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "lookingFor": ["Percussion"],
+    "available": true,
+    "currentGroups": ["The Nananas"],
+    "formerGroups": "Jackson 5",
+    "profileImage": "",
+    "profileGallery": [""],
+    "id": "test7"
   }]
 }
