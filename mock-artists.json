@@ -11,7 +11,13 @@
     "formerGroups": [],
     "profileImage": "",
     "profileGallery": [""],
-    "id": "test0"
+    "uid": "test0",
+    "messages":  [
+      {
+        "senderId": "test0",
+        "content": "this is a test message!"
+      }
+    ]
   }, {
     "name": "Egsrdfrgs",
     "location": "Hell, MI",
@@ -24,7 +30,13 @@
     "formerGroups": [""],
     "profileImage": "",
     "profileGallery": [""],
-    "id": "test1"
+    "uid": "test1",
+    "messages":  [
+      {
+        "senderId": "test0",
+        "content": "this is a test message!"
+      }
+    ]
   }, {
     "name": "DJ ROBODENDRONCAMACAST",
     "location": "St Paul, MN",
@@ -37,7 +49,13 @@
     "formerGroups": ["Bonus Men", "Kombucha Wizards"],
     "profileImage": "",
     "profileGallery": [""],
-    "id": "test2"
+    "uid": "test2",
+    "messages":  [
+      {
+        "senderId": "test0",
+        "content": "this is a test message!"
+      }
+    ]
   }, {
     "name": "Carl",
     "location": "Carlsbad, CA",
@@ -50,7 +68,13 @@
     "formerGroups": ["Cameleo"],
     "profileImage": "",
     "profileGallery": [""],
-    "id": "test3"
+    "uid": "test3",
+    "messages":  [
+      {
+        "senderId": "test0",
+        "content": "this is a test message!"
+      }
+    ]
   }, {
     "name": "God Johnson",
     "location": "Houston, TX",
@@ -63,7 +87,13 @@
     "formerGroups": [""],
     "profileImage": "",
     "profileGallery": [""],
-    "id": "test4"
+    "uid": "test4",
+    "messages":  [
+      {
+        "senderId": "test0",
+        "content": "this is a test message!"
+      }
+    ]
   }, {
     "name": "Michael Jackson",
     "location": "Detroit, MI",
@@ -76,7 +106,13 @@
     "formerGroups": ["Jackson 5"],
     "profileImage": "",
     "profileGallery": [""],
-    "id": "test5"
+    "uid": "test5",
+    "messages":  [
+      {
+        "senderId": "test0",
+        "content": "this is a test message!"
+      }
+    ]
   }, {
     "name": "Michael Jordan",
     "location": "Wilmington, NC",
@@ -89,7 +125,13 @@
     "formerGroups": [""],
     "profileImage": "",
     "profileGallery": [""],
-    "id": "test6"
+    "uid": "test6",
+    "messages":  [
+      {
+        "senderId": "test0",
+        "content": "this is a test message!"
+      }
+    ]
   }, {
     "name": "Dareat Ioeart",
     "location": "Minneapolis, MN",
@@ -102,6 +144,12 @@
     "formerGroups": "Jackson 5",
     "profileImage": "",
     "profileGallery": [""],
-    "id": "test7"
+    "uid": "test7",
+    "messages":  [
+      {
+        "senderId": "test0",
+        "content": "this is a test message!"
+      }
+    ]
   }]
 }

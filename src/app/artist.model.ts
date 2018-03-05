@@ -8,7 +8,7 @@ export class Artist {
       senderId: "test0",
       content: "this is a test message!"
     }
-  ]
+  ];
 
   constructor(
     public name: string,
