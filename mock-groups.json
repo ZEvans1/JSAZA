@@ -1,0 +1,13 @@
+public name: string, public location: string, public genre: string, public members: string[], public bio: string, public lookingFor: string[], public available: boolean
+
+{
+  "groups": [{
+    "name": "The Grateful Dead",
+    "location": "San Francisco, CA",
+    "genre": "Rock",
+    "members": ["Ron 'Pigpen' McKernan", "Jerry Garcia", "Phil Lesh", "Bob Weir", "Bill Kreutzmann"],
+    "bio": "The Grateful Dead was an American rock band formed in 1965 in Palo Alto, California.[1][2] Ranging from quintet to septet, the band is known for its unique and eclectic style, which fused elements of rock, psychedelia, experimental music, modal jazz, country, folk, bluegrass, blues, reggae, and space rock,[3][4] for live performances of lengthy instrumental jams,[5][6] and for their devoted fan base, known as 'Deadheads'",
+    "lookingFor": ["Keyboard", "Drum"],
+    "available": true
+  }]
+}
