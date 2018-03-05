@@ -1,6 +1,6 @@
 //angular imports
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 //bootstrap imports
@@ -19,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 //service imports
+import { AuthService } from './../services/auth.service';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -39,12 +40,12 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     routing,
+    AngularFireModule.initializeApp(masterFirebaseConfig),
     AlertModule.forRoot(),
-    AngularFireModule.initializeApp(masterFirebaseConfig, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
