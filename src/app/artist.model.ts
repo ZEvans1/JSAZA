@@ -1,6 +1,6 @@
 export class Artist {
 
-  id: string = "";
+  uid: string;
   profileImage: string = "";
   profileGallery: string[] = [""];
   messages: Object[] = [

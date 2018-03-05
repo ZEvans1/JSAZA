@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Artist } from './../artist.model';
+import * as firebase from 'firebase';
 
 @Injectable()
 export class ArtistService {
@@ -10,9 +11,19 @@ export class ArtistService {
     this.artists = database.list('artists');
   }
 
-  addArtist(newArtist: Artist, id: String) {
-    // newArtist.id = id;
-    this.artists.push(newArtist)
+  addArtist(newArtist: Artist, uid: string) {
+    newArtist.uid = uid;
+    firebase.database().ref('artists/' + uid).set({
+      name: newArtist.name,
+      location: newArtist.location,
+      instruments: newArtist.instruments,
+      genres: newArtist.genres,
+      bio: newArtist.bio,
+      lookingFor: newArtist.lookingFor,
+      available: newArtist.available,
+      currentGroups: newArtist.currentGroups,
+      formerGroups: newArtist.formerGroups
+    })
   }
 
   getAll() {
