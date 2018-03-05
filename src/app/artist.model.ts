@@ -1,2 +1,2 @@
-export class Artist.Model {
+export class Artist {
 }
