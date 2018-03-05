@@ -19,7 +19,9 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 //service imports
-import { AuthService } from './../services/auth.service';
+import { AuthService } from './services/auth.service';
+import { ArtistService } from './services/artist.service';
+import { CreateArtistComponent } from './create-artist/create-artist.component';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +35,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreateArtistComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,9 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    ArtistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
