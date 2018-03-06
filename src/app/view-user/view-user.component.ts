@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 import { Artist } from '../artist.model';
 import { ArtistService } from '../services/artist.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-view-user',
@@ -19,7 +20,8 @@ export class ViewUserComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private artistService: ArtistService
+    private artistService: ArtistService,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -32,8 +34,14 @@ export class ViewUserComponent implements OnInit {
    })
   }
 
-  sendPrivateMessage(localArtist, message) {
-    this.artistToDisplay.messages.push(message);
+  sendPrivateMessage(message) {
+    this.artistToDisplay.messages.push(
+      {
+        content: message,
+        senderId: this.authService.userDetails.uid
+      });
+    this.artistService.updateArtist(this.artistToDisplay);
+    console.log(this.artistToDisplay.messages);
   }
 
 }

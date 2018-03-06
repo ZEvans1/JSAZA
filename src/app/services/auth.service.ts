@@ -26,7 +26,6 @@ export class AuthService {
 		);
 	}
 
-
 	createAccount(email, password) {
 		const credential = firebase.auth.EmailAuthProvider.credential(email, password);
 		return this.firesbaseAuth.auth.createUserWithEmailAndPassword(email, password);

@@ -48,9 +48,20 @@ export class ArtistService {
   }
 
   updateArtist(localUpdatedArtist) {
-    let artistInFirebase = this.getArtistById(localUpdatedArtist.id);
+    let artistInFirebase = this.getArtistById(localUpdatedArtist.$key);
     artistInFirebase.update({
-      //all properties!
+      name: localUpdatedArtist.name,
+      location: localUpdatedArtist.location,
+      instruments: localUpdatedArtist.instruments,
+      genres: localUpdatedArtist.genres,
+      bio: localUpdatedArtist.bio,
+      lookingFor: localUpdatedArtist.lookingFor,
+      available: localUpdatedArtist.available,
+      currentGroups: localUpdatedArtist.currentGroups,
+      formerGroups: localUpdatedArtist.formerGroups,
+      messages: localUpdatedArtist.messages,
+      profileImage: localUpdatedArtist.profileImage,
+      gallery: localUpdatedArtist.gallery
     })
   }
 

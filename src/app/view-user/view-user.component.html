@@ -1,1 +1,7 @@
 <p>Page for (artist / band name here)</p>
+
+<form>
+  <label for="messages">Send this user a message</label>
+  <textarea #newMessage rows="4" cols="40"></textarea>
+  <button (click)="sendPrivateMessage(newMessage.value);newMessage.value='';">send</button>
+</form>
