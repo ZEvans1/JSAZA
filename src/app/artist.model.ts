@@ -1,14 +1,14 @@
 export class Artist {
 
-  id: string = "";
+  uid: string;
   profileImage: string = "";
-  profileGallery: string[] = [""];
+  gallery: string[] = [""];
   messages: Object[] = [
     {
       senderId: "test0",
       content: "this is a test message!"
     }
-  ]
+  ];
 
   constructor(
     public name: string,
