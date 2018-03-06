@@ -1,24 +1,25 @@
-export class Artist {
 
-  uid: string;
+export class Artist {
+  uid: string = "";
   profileImage: string = "";
   gallery: string[] = [""];
+  test: false;
   messages: Object[] = [
     {
-      senderId: "test0",
-      content: "this is a test message!"
+      senderId: "0",
+      content: "this is a test message!",
+      timestamp: new Date().toString()
     }
   ];
 
   constructor(
     public name: string,
-    public location: string,
+    public location: object,
     public instruments: string[],
     public genres: string[],
     public bio: string,
     public lookingFor: string[],
     public available: boolean,
-    public currentGroups: string[],
-    public formerGroups: string[]) {}
+    public groups: object) {}
 
 }
