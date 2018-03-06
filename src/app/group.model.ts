@@ -9,16 +9,6 @@ export class Group {
       timestamp: new Date().toString()
     }
   ];
-  groups: Object[] = [
-    {
-      name: "Test Group",
-      role: "Founder/singer-songwriter",
-      startDate: "1900",
-      endDate: "",
-      verified: false
-    }
-  ];
-
 
   constructor(
     public name: string,
