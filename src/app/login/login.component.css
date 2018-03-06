@@ -10,13 +10,13 @@
 #signIn{
 }
 
-.loginInput{
+/*.loginInput{
   height: 30px;
-}
+}*/
 
 #submitBtn{
   width: 100px;
-  height: 25px;
+  /*height: 25px;*/
   margin-top: 2%;
 }
 

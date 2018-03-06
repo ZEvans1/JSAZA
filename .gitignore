@@ -45,5 +45,8 @@ Thumbs.db
 # environments
 /src/environments/*
 api-keys.ts
+
 # Firebase
 /firebase-debug.log
+
+bower_components/
