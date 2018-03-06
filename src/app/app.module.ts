@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 //bootstrap imports
 import { AlertModule } from 'ngx-bootstrap';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 //firebase imports
 import { AngularFireModule } from 'angularfire2';
@@ -59,7 +62,10 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(masterFirebaseConfig),
     AlertModule.forRoot(),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+		BsDropdownModule.forRoot(),
+		TooltipModule.forRoot(),
+		ModalModule.forRoot()
   ],
   providers: [
     AuthService,
