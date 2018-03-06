@@ -2,7 +2,7 @@ export class Artist {
 
   uid: string;
   profileImage: string = "";
-  profileGallery: string[] = [""];
+  gallery: string[] = [""];
   messages: Object[] = [
     {
       senderId: "test0",
