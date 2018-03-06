@@ -21,27 +21,65 @@
     <input type="text" value="97204" #newZip>
   </div>
   <div class="form-group">
-    <label for="Instruments">Instruments</label><br>
-    <input value="guitar" #newInstrument>
-    <button (click)="addNewInstrument(newInstrument.value)">Add Another Instrument</button><br>
-    Current Instruments:
+    <select #currentInstrument>
+      <option [attr.value]="Guitar">Guitar</option>
+      <option [attr.value]="Bass">Bass</option>
+      <option [attr.value]="Keyboards">Keyboards</option>
+      <option [attr.value]="Drums">Drums</option>
+      <option [attr.value]="Vocals">Vocals</option>
+    </select>
+    <button (click)="addNewInstrument(currentInstrument.value)">Add Another Instrument</button><br>
+    <div *ngIf="currentInstrument">
+      Current Instrumet: {{currentInstrument.value}}
+    </div>
+    <p>Added Instruments:</p>
     <div *ngFor="let instrument of instruments">
       {{instrument}}
+      <br>
     </div>
+    <br>
   </div>
   <div class="form-group">
-    <label for="Genres">Genres</label>
-    <input type="text" value="rock" #newGenre1>
-    <input type="text" value="classical" #newGenre2>
-    <input type="text" value="jazz" #newGenre3>
+    <select #currentGenre>
+      <option [attr.value]="Rock">Rock</option>
+      <option [attr.value]="Jazz">Jazz</option>
+      <option [attr.value]="Classical">Classical</option>
+      <option [attr.value]="Country">Country</option>
+      <option [attr.value]="Pop">Pop</option>
+    </select>
+    <button (click)="addNewGenre(currentGenre.value)">Add Another Instrument</button><br>
+    <div *ngIf="currentGenre">
+      Current Genre: {{currentGenre.value}}
+    </div>
+    <p>Added Genres:</p>
+    <div *ngFor="let genre of genres">
+      {{genre}}
+      <br>
+    </div>
+    <br>
   </div>
   <div class="form-group">
     <label for="Bio">Bio</label>
     <textarea value="Bio" #newBio></textarea>
   </div>
   <div class="form-group">
-    <label for="LookingFor">LookingFor</label>
-    <input type="text" value="sing" #newLookingFor>
+    <label for="LookingFor">Looking For</label>
+    <select #currentLookingFor>
+      <option [attr.value]="Guitar">Guitar</option>
+      <option [attr.value]="Bass">Bass</option>
+      <option [attr.value]="Keyboards">Keyboards</option>
+      <option [attr.value]="Drums">Drums</option>
+      <option [attr.value]="Vocals">Vocals</option>
+    </select>
+    <div *ngIf="currentLookingFor">
+      Looking For: {{currentLookingFor.value}}
+    </div>
+    <button (click)="addNewLookingFor(currentLookingFor.value)">Add</button>
+    <br>
+    Added to Looking For:
+    <div *ngFor="let lookingFor of allLookingFor">
+      {{lookingFor}}
+    </div>
   </div>
   <div class="form-group">
     <label for="Available">Available</label>
@@ -66,7 +104,7 @@
 
 
   </div>
-  <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newStreet.value, newCity.value, newState.value, newZip.value, newGenre1.value, newGenre2.value, newGenre3.value, newBio.value, newLookingFor.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
+  <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newStreet.value, newCity.value, newState.value, newZip.value, newBio.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
 </form>
 
 <button (click)="testFunc()">testFunc()</button>
