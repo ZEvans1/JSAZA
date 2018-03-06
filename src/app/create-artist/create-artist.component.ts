@@ -25,7 +25,6 @@ export class CreateArtistComponent implements OnInit {
   submitForm(newName: string, newEmail: string, newPassword: string, newStreet: string, newCity: string, newState: string, newZip: string, newInstrument1: string, newInstrument2: string, newInstrument3: string, newGenre1: string, newGenre2: string, newGenre3: string, newBio: string, newLookingFor: string[], newAvailable: boolean, newGroupId: string, newGroupRole: string, newGroupStartDate: string, newGroupEndDate: string, newProfileImg: string, newGalleryURL1: string, newGalleryURL2: string, newGalleryURL3: string) {
     this.authService.createAccount(newEmail, newPassword);
     let location = {
-      street: newStreet,
       city: newCity,
       state: newState,
       zip: newZip
@@ -33,10 +32,11 @@ export class CreateArtistComponent implements OnInit {
     let instruments =[newInstrument1, newInstrument2, newInstrument3];
     let genres = [newGenre1, newGenre2, newGenre3];
     let groups = {
-      groupId: newGroupId,
+      name: newGroupId,
       role: newGroupRole,
       startDate: newGroupStartDate,
-      endDate: newGroupEndDate
+      endDate: newGroupEndDate,
+      verified: false
     }
     let that = this;
     let newArtist = new Artist(newName, location, instruments, genres, newBio, newLookingFor, newAvailable, groups);

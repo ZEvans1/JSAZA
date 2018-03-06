@@ -1,7 +1,32 @@
 export class Group {
-  id: string = "";
   profileImage: string = "";
-  profileGallery: string[] = [""];
+  gallery: string[] = [""];
+  test: false;
+  messages: Object[] = [
+    {
+      senderId: "0",
+      content: "this is a test message!",
+      timestamp: new Date().toString()
+    }
+  ];
+  groups: Object[] = [
+    {
+      name: "Test Group",
+      role: "Founder/singer-songwriter",
+      startDate: "1900",
+      endDate: "",
+      verified: false
+    }
+  ];
 
-  constructor(public name: string, public location: string, public genre: string[], public members: string[], public bio: string, public lookingFor: string[], public available: boolean) {}
+
+  constructor(
+    public name: string,
+    public location: object,
+    public genre: string[],
+    public members: string[],
+    public bio: string,
+    public lookingFor: string[],
+    public available: boolean
+  ){}
 }
