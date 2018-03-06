@@ -97,7 +97,7 @@
     "location": {
       "city": "Carlsbad",
       "state": "CA",
-      "zip": "92008",
+      "zip": "92008"
     },
     "instruments": ["Theramin", "Bongos"],
     "genres": ["Folk", "Rock"],
@@ -130,7 +130,7 @@
     "location": {
       "city": "Houston",
       "state": "TX",
-      "zip": "77001",
+      "zip": "77001"
     },
     "instruments": ["Wave Function Generator", "Electric Guitar", "Saxophone", "Percussion"],
     "genres": ["Electronic", "Jazz", "Rock"],
@@ -157,7 +157,7 @@
     "location": {
       "city": "Detroit",
       "state": "MI",
-      "zip": "48127",
+      "zip": "48127"
     },
     "instruments": ["Vocals", "Dancer"],
     "genres": ["Pop"],
@@ -184,7 +184,7 @@
     "location": {
       "city": "Wilmington",
       "state": "NC",
-      "zip": "28401",
+      "zip": "28401"
     },
     "instruments": [""],
     "genres": [""],
@@ -206,7 +206,7 @@
     "location": {
       "city": "Minneapolis",
       "state": "MN",
-      "zip": "55404",
+      "zip": "55404"
     },
     "instruments": ["Electric Guitar", "Saxophone"],
     "genres": ["Funk", "Rock"],
