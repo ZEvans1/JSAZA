@@ -26,6 +26,9 @@ import { CreateArtistComponent } from './create-artist/create-artist.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { SearchComponent } from './search/search.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
+import { InstrumentPipe } from './instrument.pipe';
+import { GenrePipe } from './genre.pipe';
+import { AvailablePipe } from './available.pipe';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -43,7 +46,10 @@ export const firebaseConfig = {
     CreateArtistComponent,
     ViewUserComponent,
     SearchComponent,
-    CreateGroupComponent
+    CreateGroupComponent,
+    InstrumentPipe,
+    GenrePipe,
+    AvailablePipe
   ],
   imports: [
     BrowserModule,

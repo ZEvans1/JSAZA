@@ -13,7 +13,6 @@ export class ArtistService {
   }
 
   addArtist(newArtist: Artist, uid: string) {
-    newArtist.uid = uid;
     var user = firebase.auth().currentUser;
     user.updateProfile({
       displayName: newArtist.name,
