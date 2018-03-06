@@ -7,12 +7,14 @@
   font-family: sans-serif;
 }
 
+
 #signIn{
 }
 
-/*.loginInput{
-  height: 30px;
-}*/
+.container{
+  margin-top: 33%;
+}
+
 
 #submitBtn{
   width: 100px;

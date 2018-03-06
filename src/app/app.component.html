@@ -1,12 +1,18 @@
-<div class="top-nav">
-      <button class="account" routerLink="create-artist" id="email-button" type="button" name="button"><i class="material-icons">play_circle_filled</i><strong>SIGN UP </strong></button>
-      <button class="account" routerLink="" id="signin-button" type="button" name="button"><i class="material-icons">play_circle_outline</i><strong>SIGN IN</strong></button>
-      <a href="artist-search">Search</a>
-      <!-- <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-      <a href="#">Link 4</a>
-      <a href="#">Link 5</a> -->
-</div>
+<!-- <div class="top-nav">
+      <button class="account btn btn-link" routerLink="create-artist" id="email-button" type="button" name="button"><strong>SIGN UP</strong></button>
+      <button class="account btn btn-link" routerLink="" id="signin-button" type="button" name="button"><strong>SIGN IN</strong></button> -->
+      <ul class="navbar">
+      <li class="navitems"><a class="navlinks" href="#">Link 1</a></li>
+      <li class="navitems"><a class="navlinks" href="#">Link 2</a></li>
+      <li class="navitems"><a class="navlinks" href="#">Link 3</a></li>
+      <li class="navitems"><a class="navlinks" href="#">Link 4</a></li>
+      <li class="navitems"><a class="navlinks" href="#">Link 5</a></li>
+      <button class="account btn btn-link" routerLink="create-artist" id="email-button" type="button" name="button"><strong>SIGN UP</strong></button>
+      <button class="account btn btn-link" routerLink="" id="signin-button" type="button" name="button"><strong>SIGN IN</strong></button>
+      <button class="group" routerLink="create-group" id="group-button" type="button"><strong>CREATE GROUP </strong></button>
+    </ul>
+
+
 <h1 *ngIf="this.authService.isLoggedIn()">
   Welcome, {{ displayName }}!
   <img src="{{ photoURL }}" width="100px">

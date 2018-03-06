@@ -30,7 +30,7 @@ export class CreateArtistComponent implements OnInit {
   }
 
   addNewInstrument(instrument) {
-    this.instruments.push(instrument)
+    this.instruments.push(instrument);
   }
 
   addNewGenre(genre) {

@@ -20,22 +20,13 @@
     <input type="text" value="97204" #newZip>
   </div>
   <div class="form-group">
-    <select #currentInstrument>
-      <option [attr.value]="Guitar">Guitar</option>
-      <option [attr.value]="Bass">Bass</option>
-      <option [attr.value]="Keyboards">Keyboards</option>
-      <option [attr.value]="Drums">Drums</option>
-      <option [attr.value]="Vocals">Vocals</option>
-    </select>
-    <button (click)="addNewInstrument(currentInstrument.value)">Add Another Instrument</button><br>
-    <div *ngIf="currentInstrument">
-      Current Instrumet: {{currentInstrument.value}}
-    </div>
-    <p>Added Instruments:</p>
-    <div *ngFor="let instrument of instruments">
-      {{instrument}}
-      <br>
-    </div>
+    <label for="Members">Members</label>
+    <input type="text" value="member" #currentMember>
+  </div>
+  <button (click)="addNewMember(currentMember.value)">Add Another Member</button>
+  <br>
+  <div *ngFor="let member of members">
+    {{member}}
     <br>
   </div>
   <div class="form-group">
@@ -85,13 +76,6 @@
     <input type="text" value="true" #newAvailable>
   </div>
   <div class="form-group">
-    <label for="Groups">Groups</label>
-    <input type="text" value="groupId" #newGroupId>
-    <input type="text" value="groupRole" #newGroupRole>
-    <input type="text" value="groupStartDate" #newGroupStartDate>
-    <input type="text" value="groupEndDate" #newGroupEndDate>
-  </div>
-  <div class="form-group">
     <label for="imageURL">Profile image url</label>
     <input type="text" value="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" #newProfileImg>
   </div>
@@ -101,7 +85,5 @@
     <input type="text" value="galleryURLtwo" #newGalleryURL2>
     <input type="text" value="galleryURLthree" #newGalleryURL3>
   </div>
-  <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newCity.value, newState.value, newZip.value, newBio.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
+  <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newCity.value, newState.value, newZip.value, newBio.value, newAvailable.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
 </form>
-
-<button (click)="testFunc()">testFunc()</button>
