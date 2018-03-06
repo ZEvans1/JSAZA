@@ -22,6 +22,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
 import { ArtistService } from './services/artist.service';
 import { CreateArtistComponent } from './create-artist/create-artist.component';
+import { ViewUserComponent } from './view-user/view-user.component';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -36,7 +37,8 @@ export const firebaseConfig = {
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    CreateArtistComponent
+    CreateArtistComponent,
+    ViewUserComponent
   ],
   imports: [
     BrowserModule,
