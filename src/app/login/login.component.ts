@@ -23,13 +23,13 @@ export class LoginComponent implements OnInit {
 	constructor(private authService: AuthService, private router: Router) {
 	}
 
-	signInWithGoogle() {
-		this.authService.signInWithGoogle()
-			.then((res) => {
-				this.router.navigate(['dashboard'])
-			})
-			.catch((err) => console.log(err));
-	}
+	// signInWithGoogle() {
+	// 	this.authService.signInWithGoogle()
+	// 		.then((res) => {
+	// 			this.router.navigate(['dashboard'])
+	// 		})
+	// 		.catch((err) => console.log(err));
+	// }
 
 	createAccount() {
 		this.authService.createAccount(this.user.email, this.user.password)

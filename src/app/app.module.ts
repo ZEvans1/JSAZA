@@ -4,10 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 //bootstrap imports
-import { AlertModule } from 'ngx-bootstrap';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { ModalModule } from 'ngx-bootstrap/modal';
+import "materialize-css";
+import { MaterializeModule } from "angular2-materialize";
 
 //firebase imports
 import { AngularFireModule } from 'angularfire2';
@@ -25,10 +23,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
 import { ArtistService } from './services/artist.service';
 import { GroupService } from './services/group.service';
+
+//components
 import { CreateArtistComponent } from './create-artist/create-artist.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { SearchComponent } from './search/search.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
+
+//pipes
 import { InstrumentPipe } from './instrument.pipe';
 import { GenrePipe } from './genre.pipe';
 import { AvailablePipe } from './available.pipe';
@@ -63,6 +65,7 @@ export const firebaseConfig = {
     AlertModule.forRoot(),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+		MaterializeModule
 		BsDropdownModule.forRoot(),
 		TooltipModule.forRoot(),
 		ModalModule.forRoot()

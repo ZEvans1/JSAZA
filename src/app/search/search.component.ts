@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './../services/auth.service';
 import { ArtistService } from './../services/artist.service';
+import { MaterializeModule } from "angular2-materialize";
 
 @Component({
   selector: 'app-search',

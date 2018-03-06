@@ -1,7 +1,8 @@
 <h2>Artist Search</h2>
-<div class="select-bar">
-  <label>Search by instrument</label>
-  <select (change)="onChangeInstrument($event.target.value)">
+
+<div class="row">
+<div  class="input-field col s4">
+  <select materialize="material_select" (change)="onChangeInstrument($event.target.value)">
     <option value="all">all</option>
     <option value="drums">drums</option>
     <option value="bass">bass</option>
@@ -9,8 +10,10 @@
     <option value="voice">voice</option>
     <option value="keyboard">keyboard</option>
   </select>
-  <label>Search by genre</label>
-  <select (change)="onChangeGenre($event.target.value)">
+  <label>Search by instrument</label>
+</div>
+<div  class="input-field col s4">
+  <select materialize="material_select" (change)="onChangeGenre($event.target.value)">
     <option value="all">all</option>
     <option value="pop">pop</option>
     <option value="rock">rock</option>
@@ -20,12 +23,15 @@
     <option value="metal">metal</option>
     <option value="blues">blues</option>
   </select>
-  <label>Filter by Availability</label>
-  <select (change)="onChangeAvailable($event.target.value)">
+  <label>Search by genre</label>
+</div>
+  <div  class="input-field col s4">
+  <select materialize="material_select" (change)="onChangeAvailable($event.target.value)">
     <option value="all">all</option>
       <option value="true">yes</option>
       <option value="false">no</option>
   </select>
+  <label>Filter by Availability</label>
 </div>
 
 <div *ngFor="let artist of artists | async | instrumentPipe:filterByInstrument | genrePipe:filterByGenre | availablePipe:filterByAvailable" class="panel panel-default">
@@ -36,4 +42,5 @@
     <h3>Genres:</h3>
     <p *ngFor="let genre of artist.genres">{{genre}}</p>
   </div>
+</div>
 </div>
