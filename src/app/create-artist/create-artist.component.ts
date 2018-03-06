@@ -30,11 +30,7 @@ export class CreateArtistComponent implements OnInit {
   }
 
   addNewInstrument(instrument) {
-    if (this.instruments.includes(instrument)) {
-      this.instruments.slice(this.instruments.indexOf(instrument), this.instruments.indexOf(instrument + 1));
-    } else {
-      this.instruments.push(instrument)
-    }
+    this.instruments.push(instrument);
   }
 
   addNewGenre(genre) {

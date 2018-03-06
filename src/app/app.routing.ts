@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateArtistComponent } from './create-artist/create-artist.component';
+import { CreateGroupComponent } from './create-group/create-group.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { SearchComponent } from './search/search.component';
 
@@ -19,6 +20,10 @@ const appRoutes: Routes = [
     path: 'create-artist',
     component: CreateArtistComponent
   },
+  {
+    path: 'create-group',
+    component: CreateGroupComponent
+  }
   {
     path: 'details/:id',
     component: ViewUserComponent
