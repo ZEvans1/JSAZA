@@ -23,7 +23,7 @@ const appRoutes: Routes = [
   {
     path: 'create-group',
     component: CreateGroupComponent
-  }
+  },
   {
     path: 'details/:id',
     component: ViewUserComponent

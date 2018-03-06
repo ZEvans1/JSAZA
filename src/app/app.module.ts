@@ -62,13 +62,9 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(masterFirebaseConfig),
-    AlertModule.forRoot(),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
 		MaterializeModule
-		BsDropdownModule.forRoot(),
-		TooltipModule.forRoot(),
-		ModalModule.forRoot()
   ],
   providers: [
     AuthService,
