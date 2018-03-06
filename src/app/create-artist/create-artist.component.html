@@ -21,11 +21,13 @@
     <input type="text" value="97204" #newZip>
   </div>
   <div class="form-group">
-    <label for="Instruments">Instruments</label>
-    <input type="text" value="guitar" #newInstrument1>
-    <input type="text" value="bass" #newInstrument2>
-    <input type="text" value="drums" #newInstrument3>
-    <input type="text" value="keyboard" #newInstrument4>
+    <label for="Instruments">Instruments</label><br>
+    <input value="guitar" #newInstrument>
+    <button (click)="addNewInstrument(newInstrument.value)">Add Another Instrument</button><br>
+    Current Instruments:
+    <div *ngFor="let instrument of instruments">
+      {{instrument}}
+    </div>
   </div>
   <div class="form-group">
     <label for="Genres">Genres</label>
@@ -35,7 +37,7 @@
   </div>
   <div class="form-group">
     <label for="Bio">Bio</label>
-    <input type="text" value="Bio" #newBio>
+    <textarea value="Bio" #newBio></textarea>
   </div>
   <div class="form-group">
     <label for="LookingFor">LookingFor</label>
@@ -58,13 +60,13 @@
   </div>
   <div class="form-group">
     <label for="gallery">Gallery img urls</label>
-    <input type="text" value="galleryURLone" #newGalleryURL1>
-    <input type="text" value="galleryURLtwo" #newGalleryURL2>
-    <input type="text" value="galleryURLthree" #newGalleryURL3>
+    <input type="text" #newGalleryURL1>
+    <input type="text" #newGalleryURL2>
+    <input type="text" #newGalleryURL3>
 
 
   </div>
-  <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newStreet.value, newCity.value, newState.value, newZip.value, newInstrument1.value, newInstrument2.value, newInstrument3.value, newGenre1.value, newGenre2.value, newGenre3.value, newBio.value, newLookingFor.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
+  <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newStreet.value, newCity.value, newState.value, newZip.value, newGenre1.value, newGenre2.value, newGenre3.value, newBio.value, newLookingFor.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
 </form>
 
 <button (click)="testFunc()">testFunc()</button>

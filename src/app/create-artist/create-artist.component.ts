@@ -15,14 +15,18 @@ import { Router } from '@angular/router';
 })
 export class CreateArtistComponent implements OnInit {
 
-
+  instruments: string[] = [];
 
   constructor(private router: Router, private authService: AuthService, private artistService: ArtistService) { }
 
   ngOnInit() {
   }
 
-  submitForm(newName: string, newEmail: string, newPassword: string, newStreet: string, newCity: string, newState: string, newZip: string, newInstrument1: string, newInstrument2: string, newInstrument3: string, newGenre1: string, newGenre2: string, newGenre3: string, newBio: string, newLookingFor: string[], newAvailable: boolean, newGroupId: string, newGroupRole: string, newGroupStartDate: string, newGroupEndDate: string, newProfileImg: string, newGalleryURL1: string, newGalleryURL2: string, newGalleryURL3: string) {
+  addNewInstrument(instrument) {
+    this.instruments.push(instrument)
+  }
+
+  submitForm(newName: string, newEmail: string, newPassword: string, newStreet: string, newCity: string, newState: string, newZip: string, newGenre1: string, newGenre2: string, newGenre3: string, newBio: string, newLookingFor: string[], newAvailable: boolean, newGroupId: string, newGroupRole: string, newGroupStartDate: string, newGroupEndDate: string, newProfileImg: string, newGalleryURL1: string, newGalleryURL2: string, newGalleryURL3: string) {
     this.authService.createAccount(newEmail, newPassword);
     let location = {
       street: newStreet,
@@ -30,7 +34,6 @@ export class CreateArtistComponent implements OnInit {
       state: newState,
       zip: newZip
     };
-    let instruments =[newInstrument1, newInstrument2, newInstrument3];
     let genres = [newGenre1, newGenre2, newGenre3];
     let groups = {
       groupId: newGroupId,
@@ -39,7 +42,7 @@ export class CreateArtistComponent implements OnInit {
       endDate: newGroupEndDate
     }
     let that = this;
-    let newArtist = new Artist(newName, location, instruments, genres, newBio, newLookingFor, newAvailable, groups);
+    let newArtist = new Artist(newName, location, this.instruments, genres, newBio, newLookingFor, newAvailable, groups);
     newArtist.profileImage = newProfileImg;
     newArtist.gallery = [newGalleryURL1, newGalleryURL2, newGalleryURL3];
     setTimeout(function() {
