@@ -1,0 +1,10 @@
+.account{
+  float: right;
+  height: 100%;
+}
+.top-nav{
+  border-bottom: 1px solid lightgrey;
+  overflow: auto;
+  background-color: #333;
+  height: 30px;
+}

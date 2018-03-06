@@ -1,0 +1,25 @@
+.form-group{
+  font-size: 20px;
+}
+
+.container{
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#signIn{
+}
+
+.loginInput{
+  height: 30px;
+}
+
+#submitBtn{
+  width: 100px;
+  height: 25px;
+  margin-top: 2%;
+}
+
+.create{
+  margin-top: 5%;
+}
