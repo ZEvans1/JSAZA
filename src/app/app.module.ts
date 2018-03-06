@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 //bootstrap imports
 import { AlertModule } from 'ngx-bootstrap';
+import "materialize-css";
+import { MaterializeModule } from "angular2-materialize";
 
 //firebase imports
 import { AngularFireModule } from 'angularfire2';
@@ -56,7 +58,8 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(masterFirebaseConfig),
     AlertModule.forRoot(),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+		MaterializeModule
   ],
   providers: [
     AuthService,

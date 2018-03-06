@@ -10,8 +10,8 @@ export class AuthService {
 	user: Observable<firebase.User>;
 	userDetails: firebase.User = null;
 
-	constructor(private firesbaseAuth: AngularFireAuth, private router: Router) {
-		this.user = firesbaseAuth.authState;
+	constructor(private firebaseAuth: AngularFireAuth, private router: Router) {
+		this.user = firebaseAuth.authState;
 
 		this.user.subscribe(
 			(user) => {
@@ -28,16 +28,16 @@ export class AuthService {
 
 	createAccount(email, password) {
 		const credential = firebase.auth.EmailAuthProvider.credential(email, password);
-		return this.firesbaseAuth.auth.createUserWithEmailAndPassword(email, password);
+		return this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password);
 	}
 
 	signInRegular(email, password) {
 		const credential = firebase.auth.EmailAuthProvider.credential(email, password);
-		return this.firesbaseAuth.auth.signInWithEmailAndPassword(email, password);
+		return this.firebaseAuth.auth.signInWithEmailAndPassword(email, password);
 	}
 
 	signInWithGoogle() {
-		return this.firesbaseAuth.auth.signInWithPopup(
+		return this.firebaseAuth.auth.signInWithPopup(
 			new firebase.auth.GoogleAuthProvider()
 		)
 	}
@@ -51,7 +51,7 @@ export class AuthService {
 	}
 
 	logout() {
-		this.firesbaseAuth.auth.signOut()
+		this.firebaseAuth.auth.signOut()
 			.then((res) => this.router.navigate(['/']));
 	}
 }

@@ -10,5 +10,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "materialize": "^0.100.2"
+  }
 }
