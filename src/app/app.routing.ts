@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateArtistComponent } from './create-artist/create-artist.component';
 import { ViewUserComponent } from './view-user/view-user.component';
+import { SearchComponent } from './search/search.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'details/:id',
     component: ViewUserComponent
+  },
+  {
+    path: 'artist-search',
+    component: SearchComponent
   }
 
 ];
