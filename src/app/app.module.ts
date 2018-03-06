@@ -21,9 +21,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 //service imports
 import { AuthService } from './services/auth.service';
 import { ArtistService } from './services/artist.service';
+import { GroupService } from './services/group.service';
 import { CreateArtistComponent } from './create-artist/create-artist.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { SearchComponent } from './search/search.component';
+import { CreateGroupComponent } from './create-group/create-group.component';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -40,7 +42,8 @@ export const firebaseConfig = {
     DashboardComponent,
     CreateArtistComponent,
     ViewUserComponent,
-    SearchComponent
+    SearchComponent,
+    CreateGroupComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ export const firebaseConfig = {
   ],
   providers: [
     AuthService,
-    ArtistService],
+    ArtistService,
+		GroupService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
