@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Installation instructions
+
+after `npm install` copy your firebase database settings into a file titled `src/environments/api-keys.ts` under `export var masterFirebaseConfig = {`
+
+  `apiKey: "{your-api-key}",`
+
+`  authDomain: "{your-auth-domain}",`
+
+`  databaseURL: "{your-database-url}",`
+
+`  projectId: "{your-project-id}",`
+
+`  storageBucket: "{your-storage-bucket-url}",`
+
+`  messagingSenderId: {your-firebase-setting}`
+
+`};`

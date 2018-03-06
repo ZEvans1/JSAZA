@@ -31,8 +31,7 @@ export class ArtistService {
       bio: newArtist.bio,
       lookingFor: newArtist.lookingFor,
       available: newArtist.available,
-      currentGroups: newArtist.currentGroups,
-      formerGroups: newArtist.formerGroups,
+      groups: newArtist.groups,
       messages: newArtist.messages,
       profileImage: newArtist.profileImage,
       gallery: newArtist.gallery
