@@ -1,6 +1,5 @@
 
 export class Artist {
-  uid: string = "";
   profileImage: string = "";
   gallery: string[] = [""];
   test: false;
