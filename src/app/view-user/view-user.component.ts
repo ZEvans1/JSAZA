@@ -16,13 +16,16 @@ export class ViewUserComponent implements OnInit {
   @Output() addMessageSender = new EventEmitter();
   artistId: string;
   artistToDisplay;
+  myDate: Date;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
     private artistService: ArtistService,
     private authService: AuthService
-  ) {}
+  ) {
+    this.myDate = new Date();
+  }
 
   ngOnInit() {
     this.route.params.forEach((urlParametersArray) => {
@@ -38,7 +41,8 @@ export class ViewUserComponent implements OnInit {
     this.artistToDisplay.messages.push(
       {
         content: message,
-        senderId: this.authService.userDetails.uid
+        senderId: this.authService.userDetails.uid,
+        timestamp: this.myDate.toString()
       });
     this.artistService.updateArtist(this.artistToDisplay);
     console.log(this.artistToDisplay.messages);

@@ -3,7 +3,7 @@
 <form>
   <div class="form-group">
     <label for="Name">Name</label>
-    <input type="text" value="Name" #newName>
+    <input type="text" value="Test User" #newName>
   </div>
   <div class="form-group">
     <label for="Email">Email</label>
@@ -13,18 +13,25 @@
     <label for="Password">Password</label>
     <input type="text" value="password" #newPassword>
   </div>
-
   <div class="form-group">
     <label for="Location">Location</label>
-    <input type="text" value="Location" #newLocation>
+    <input type="text" value="123 Test Street" #newStreet>
+    <input type="text" value="Portland" #newCity>
+    <input type="text" value="Oregon" #newState>
+    <input type="text" value="97204" #newZip>
   </div>
   <div class="form-group">
     <label for="Instruments">Instruments</label>
-    <input type="text" value="Instruments" #newInstruments>
+    <input type="text" value="guitar" #newInstrument1>
+    <input type="text" value="bass" #newInstrument2>
+    <input type="text" value="drums" #newInstrument3>
+    <input type="text" value="keyboard" #newInstrument4>
   </div>
   <div class="form-group">
     <label for="Genres">Genres</label>
-    <input type="text" value="Genres" #newGenres>
+    <input type="text" value="rock" #newGenre1>
+    <input type="text" value="classical" #newGenre2>
+    <input type="text" value="jazz" #newGenre3>
   </div>
   <div class="form-group">
     <label for="Bio">Bio</label>
@@ -32,21 +39,32 @@
   </div>
   <div class="form-group">
     <label for="LookingFor">LookingFor</label>
-    <input type="text" value="LookingFor" #newLookingFor>
+    <input type="text" value="sing" #newLookingFor>
   </div>
   <div class="form-group">
     <label for="Available">Available</label>
     <input type="text" value="true" #newAvailable>
   </div>
   <div class="form-group">
-    <label for="CurrentGroups">CurrentGroups</label>
-    <input type="text" value="CurrentGroups" #newCurrentGroups>
+    <label for="Groups">CurrentGroups</label>
+    <input type="text" value="groupId" #newGroupId>
+    <input type="text" value="groupRole" #newGroupRole>
+    <input type="text" value="groupStartDate" #newGroupStartDate>
+    <input type="text" value="groupEndDate" #newGroupEndDate>
   </div>
   <div class="form-group">
-    <label for="FormerGroups">FormerGroups</label>
-    <input type="text" value="FormerGroups" #newFormerGroups>
+    <label for="imageURL">Profile image url</label>
+    <input type="text" value="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" #newProfileImg>
   </div>
-  <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newLocation.value, newInstruments.value, newGenres.value, newBio.value, newLookingFor.value, newAvailable.value, newCurrentGroups.value, newFormerGroups.value)">create</button>
+  <div class="form-group">
+    <label for="gallery">Gallery img urls</label>
+    <input type="text" value="galleryURLone" #newGalleryURL1>
+    <input type="text" value="galleryURLtwo" #newGalleryURL2>
+    <input type="text" value="galleryURLthree" #newGalleryURL3>
+
+
+  </div>
+  <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newStreet.value, newCity.value, newState.value, newZip.value, newInstrument1.value, newInstrument2.value, newInstrument3.value, newGenre1.value, newGenre2.value, newGenre3.value, newBio.value, newLookingFor.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
 </form>
 
 <button (click)="testFunc()">testFunc()</button>
