@@ -1,10 +1,39 @@
 .account{
   float: right;
   height: 100%;
+  /*color: #FFFFFF*/
 }
 .top-nav{
-  border-bottom: 1px solid lightgrey;
+  /*border-bottom: 1px solid lightgrey;
   overflow: auto;
   background-color: #333;
   height: 30px;
+  color: #FFFFFF*/
+}
+.navbar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navitems{
+  float: left;
+  border-right: 1px solid #bbb;
+}
+.navitems:last-child{
+  border-right: none;
+}
+.navlinks{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navlinks:hover{
+  background-color: #111;
 }
