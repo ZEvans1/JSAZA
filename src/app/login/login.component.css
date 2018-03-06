@@ -7,12 +7,9 @@
   font-family: sans-serif;
 }
 
-#signIn{
+.container{
+  margin-top: 33%;
 }
-
-/*.loginInput{
-  height: 30px;
-}*/
 
 #submitBtn{
   width: 100px;
