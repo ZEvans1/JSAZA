@@ -1,0 +1,9 @@
+.genreDiv {
+  float: left;
+  text-align: center;
+  height: 45px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  background-color: white;
+}
