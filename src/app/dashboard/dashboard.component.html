@@ -25,19 +25,22 @@
 
   <div class="card large col s8">
     <div class="card-content">
-      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
     </div>
     <div class="card-tabs">
       <ul class="tabs tabs-fixed-width">
-        <li class="tab"><a class="active" href="#test4">Instruments</a></li>
-        <li class="tab"><a href="#test5">Groups</a></li>
-        <li class="tab"><a href="#test6">Test 3</a></li>
+        <li class="tab"><a class="active" href="#instruments">Instruments</a></li>
+        <li class="tab"><a href="#groups">Groups</a></li>
+        <li class="tab"><a href="#genres">Genres</a></li>
       </ul>
     </div>
     <div class="card-content grey lighten-4">
-      <div id="test4">This is text that goes in here when you click on a tab.</div>
-      <div id="test5">Test 2</div>
-      <div id="test6">Test 3</div>
+      <div id="instruments">
+        <p *ngFor="let instrument of artistToDisplay.instruments">
+          <img height="100" style="float: left; padding: 10px" src="./../../assets/instrument-icons/{{instrument}}.png" alt="{{instrument}}" title="{{instrument}}">
+        </p>
+      </div>
+      <div id="groups">Test 2</div>
+      <div id="genres">Test 3</div>
     </div>
   </div>
 
