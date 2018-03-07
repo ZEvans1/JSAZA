@@ -16,6 +16,7 @@ export class Artist {
     public location: object,
     public instruments: string[],
     public genres: string[],
+    public tagline: string,
     public bio: string,
     public lookingFor: string[],
     public available: boolean,

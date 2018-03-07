@@ -1,8 +1,8 @@
-<h1>Thanks for Deciding to Join!</h1>
+<h1>Create Your Account</h1>
 <div class="row">
   <form materialize class="col s12">
     <div class="row">
-      <h5>Personal Info</h5>
+      <h4>Personal Info</h4>
       <div class="col s4">
         <label for="Name">Name</label>
         <input required type="text" value="Test User" #newName>
@@ -31,21 +31,25 @@
       </div>
     </div>
     <div class="row">
-      <div class="col s12">
+      <div class="col s4">
+        <label for="Tagline">Tagline</label>
+        <textarea class="materialize-textarea" data-length="60" required type="text" value="Tagline" #newTagline></textarea>
+      </div>
+      <div class="col s8">
         <label for="Bio">Bio</label>
-        <textarea required value="Bio" #newBio></textarea>
+        <textarea class="materialize-textarea" required value="Bio" #newBio></textarea>
       </div>
     </div>
     <div class="row">
-      <h5>Music Profile</h5>
+      <h4>Music Profile</h4>
       <div class="col s4">
         <label for="">Instruments</label>
         <select materialize="material_select" #currentInstrument>
-          <option [attr.value]="Guitar">Guitar</option>
-          <option [attr.value]="Bass">Bass</option>
-          <option [attr.value]="Keyboards">Keyboards</option>
-          <option [attr.value]="Drums">Drums</option>
-          <option [attr.value]="Vocals">Vocals</option>
+          <option [attr.value]="guitar">guitar</option>
+          <option [attr.value]="bass">bass</option>
+          <option [attr.value]="keyboard">keyboard</option>
+          <option [attr.value]="drums">drums</option>
+          <option [attr.value]="vocals">vocals</option>
         </select>
         <button (click)="addNewInstrument(currentInstrument.value)">Add Another Instrument</button><br>
         <p>Added Instruments:</p>
@@ -58,11 +62,11 @@
       <div class="col s4">
         <label for="">Genres</label>
         <select materialize="material_select" #currentGenre>
-          <option [attr.value]="Rock">Rock</option>
-          <option [attr.value]="Jazz">Jazz</option>
-          <option [attr.value]="Classical">Classical</option>
-          <option [attr.value]="Country">Country</option>
-          <option [attr.value]="Pop">Pop</option>
+          <option [attr.value]="rock">rock</option>
+          <option [attr.value]="jazz">jazz</option>
+          <option [attr.value]="classical">classical</option>
+          <option [attr.value]="country">country</option>
+          <option [attr.value]="pop">pop</option>
         </select>
         <button (click)="addNewGenre(currentGenre.value)">Add Another Instrument</button><br>
         <p>Added Genres:</p>
@@ -75,11 +79,11 @@
       <div class="col s4">
         <label for="LookingFor">Looking For</label>
         <select materialize="material_select" #currentLookingFor>
-          <option [attr.value]="Guitar">Guitar</option>
-          <option [attr.value]="Bass">Bass</option>
-          <option [attr.value]="Keyboards">Keyboards</option>
-          <option [attr.value]="Drums">Drums</option>
-          <option [attr.value]="Vocals">Vocals</option>
+          <option [attr.value]="guitar">guitar</option>
+          <option [attr.value]="bass">bass</option>
+          <option [attr.value]="keyboard">keyboard</option>
+          <option [attr.value]="drums">drums</option>
+          <option [attr.value]="vocals">vocals</option>
         </select>
         <button (click)="addNewLookingFor(currentLookingFor.value)">Add</button>
         <br>
@@ -112,7 +116,7 @@
       <input required type="text" value="galleryURLtwo" #newGalleryURL2>
       <input required type="text" value="galleryURLthree" #newGalleryURL3>
     </div>
-    <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newCity.value, newState.value, newZip.value, newBio.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
+    <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newCity.value, newState.value, newZip.value, newTagline.value, newBio.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
   </form>
 </div>
 

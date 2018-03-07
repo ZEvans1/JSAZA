@@ -15,9 +15,9 @@ export class Group {
     public location: object,
     public genre: string[],
     public members: string[],
+    public tagline: string,
     public bio: string,
     public lookingFor: string[],
     public available: boolean
   ){}
 }
- 

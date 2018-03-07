@@ -43,8 +43,7 @@ testem.log
 Thumbs.db
 
 # environments
-/src/environments/*
-api-keys.ts
+/src/environments/api-keys.ts
 
 # Firebase
 /firebase-debug.log

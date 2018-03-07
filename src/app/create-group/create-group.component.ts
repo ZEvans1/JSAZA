@@ -44,7 +44,7 @@ export class CreateGroupComponent implements OnInit {
     this.allLookingFor.push(lookingFor);
   }
 
-  submitForm(newName: string, newEmail: string, newPassword: string, newCity: string, newState: string, newZip: string, newBio: string, newAvailable: boolean, newProfileImg: string, newGalleryURL1: string, newGalleryURL2: string, newGalleryURL3: string) {
+  submitForm(newName: string, newEmail: string, newPassword: string, newCity: string, newState: string, newZip: string, newTagline: string, newBio: string, newAvailable: boolean, newProfileImg: string, newGalleryURL1: string, newGalleryURL2: string, newGalleryURL3: string) {
     this.authService.createAccount(newEmail, newPassword);
     let location = {
       city: newCity,
@@ -52,7 +52,7 @@ export class CreateGroupComponent implements OnInit {
       zip: newZip
     };
     let that = this;
-    let newGroup = new Group(newName, location, this.genres, this.members, newBio, this.allLookingFor, newAvailable);
+    let newGroup = new Group(newName, location, this.genres, this.members, newTagline, newBio, this.allLookingFor, newAvailable);
     newGroup.profileImage = newProfileImg;
     newGroup.gallery = [newGalleryURL1, newGalleryURL2, newGalleryURL3];
     setTimeout(function() {

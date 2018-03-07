@@ -1,0 +1,27 @@
+Stuff to do:
+
+Forms:
+-multiple select
+-switches
+-formatting
+
+Search:
+-cards
+-formatting
+
+Dashboard:
+-layout
+-features we haven't thought about
+-messaging
+-formatting
+  --Groups:
+    -associate an artist with a group (add/remove)
+
+Other:
+-add more instrument types
+-add more genres
+
+Future Features:
+-listening to
+-influences
+-
