@@ -41,7 +41,7 @@ export class CreateArtistComponent implements OnInit {
     this.allLookingFor.push(lookingFor);
   }
 
-  submitForm(newName: string, newEmail: string, newPassword: string, newStreet: string, newCity: string, newState: string, newZip: string, newBio: string, newAvailable: boolean, newGroupId: string, newGroupRole: string, newGroupStartDate: string, newGroupEndDate: string, newProfileImg: string, newGalleryURL1: string, newGalleryURL2: string, newGalleryURL3: string) {
+  submitForm(newName: string, newEmail: string, newPassword: string, newCity: string, newState: string, newZip: string, newBio: string, newAvailable: boolean, newGroupId: string, newGroupRole: string, newGroupStartDate: string, newGroupEndDate: string, newProfileImg: string, newGalleryURL1: string, newGalleryURL2: string, newGalleryURL3: string) {
     this.authService.createAccount(newEmail, newPassword);
     let location = {
       city: newCity,
