@@ -36,6 +36,10 @@ const appRoutes: Routes = [
   {
     path: 'group-search',
     component: GroupSearchComponent
+  },
+  {
+    path: 'view-user/:id',
+    component: DashboardComponent
   }
 
 ];

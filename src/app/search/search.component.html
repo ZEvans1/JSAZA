@@ -12,7 +12,7 @@
   </select>
   <label>Search by instrument</label>
 </div>
-<div  class="input-field col s4">
+<div class="input-field col s4">
   <select materialize="material_select" (change)="onChangeGenre($event.target.value)">
     <option value="all">all</option>
     <option value="pop">pop</option>
@@ -35,11 +35,10 @@
 </div>
 </div>
 
-<div *ngFor="let artist of artists | async | instrumentPipe:filterByInstrument | genrePipe:filterByGenre | availablePipe:filterByAvailable" class="panel panel-default card">
-  <div class="panel-body">
-    <img class="profImage" (click)="goToDetailPage(project)" src="{{artist.profileImage}}" alt="{{artist.name}}'s profile image'">
-    <h4 (click)="goToDetailPage(project)">Name: {{artist.name}} </h4>
-    <p>{{artist.tagline}}</p>
-
+  <div *ngFor="let artist of artists | async | instrumentPipe:filterByInstrument | genrePipe:filterByGenre | availablePipe:filterByAvailable" class="card" routerLink="../view-user/{{artist.$key}}">
+    <div class="panel-body">
+      <img class="profImage" src="{{artist.profileImage}}" alt="{{artist.name}}'s profile image'">
+      <h5>Name: {{artist.name}} </h5>
+      <p>{{artist.tagline}}</p>
+    </div>
   </div>
-</div>
