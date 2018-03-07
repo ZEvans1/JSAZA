@@ -1,6 +1,6 @@
 <h1>Thanks for Deciding to Join!</h1>
 
-<form>
+<form materialize>
   <div class="form-group">
     <label for="Name">Name</label>
     <input type="text" value="Test User" #newName>
@@ -30,17 +30,15 @@
     <br>
   </div>
   <div class="form-group">
-    <select #currentGenre>
+    <label for="genre">Choose Your Genre(s)</label>
+    <select name="genre" [(ngModel)]="genres" multiple materialize="material_select">
+      <option value="" disabled selected>Choose Your Genre(s)</option>
       <option [attr.value]="rock">rock</option>
       <option [attr.value]="jazz">jazz</option>
       <option [attr.value]="classical">classical</option>
       <option [attr.value]="country">country</option>
       <option [attr.value]="pop">pop</option>
     </select>
-    <button (click)="addNewGenre(currentGenre.value)">Add Another Instrument</button><br>
-    <div *ngIf="currentGenre">
-      Current Genre: {{currentGenre.value}}
-    </div>
     <p>Added Genres:</p>
     <div *ngFor="let genre of genres">
       {{genre}}
@@ -57,18 +55,15 @@
     <textarea value="Tagline" #newTagline></textarea>
   </div>
   <div class="form-group">
-    <label for="LookingFor">Looking For</label>
-    <select #currentLookingFor>
+    <label for="LookingFor">What are you looking for?</label>
+    <select name="lookingFor" [(ngModel)]="allLookingFor" multiple materialize="material_select">
+      <option value="" disabled selected>What are you looking for?</option>
       <option [attr.value]="guitar">guitar</option>
       <option [attr.value]="bass">bass</option>
       <option [attr.value]="keyboard">keyboard</option>
       <option [attr.value]="drums">drums</option>
       <option [attr.value]="vocals">vocals</option>
     </select>
-    <div *ngIf="currentLookingFor">
-      Looking For: {{currentLookingFor.value}}
-    </div>
-    <button (click)="addNewLookingFor(currentLookingFor.value)">Add</button>
     <br>
     Added to Looking For:
     <div *ngFor="let lookingFor of allLookingFor">
