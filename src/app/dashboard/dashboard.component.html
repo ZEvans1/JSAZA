@@ -11,12 +11,11 @@
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">{{artistToDisplay.name}}<i class="material-icons right">more_vert</i></span>
       <hr>
-      <p>{{artistToDisplay.tagline}}</p>
-      <hr>
+      <p><small>{{artistToDisplay.tagline}}</small></p>
       <p>
-        <small>{{artistToDisplay.location.city}}, {{artistToDisplay.location.state}}</small>
-        <a style="float: right" class="waves-effect waves-light btn-small"><i class="material-icons right">email</i>message</a>
+        <small>-{{artistToDisplay.location.city}}, {{artistToDisplay.location.state}}</small>
       </p>
+      <a id="messageButton" class="waves-effect waves-light btn"><i class="material-icons right">email</i>message</a>
 
     </div>
     <div class="card-reveal">
