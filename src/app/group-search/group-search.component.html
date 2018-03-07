@@ -1,0 +1,25 @@
+<h2>Group Search</h2>
+
+<div class="row">
+<div  class="input-field col s4">
+  <select materialize="material_select" (change)="onChangeLookingFor($event.target.value)">
+    <option value="all">all</option>
+    <option value="drums">drums</option>
+    <option value="bass">bass</option>
+    <option value="guitar">guitar</option>
+    <option value="vocals">vocals</option>
+    <option value="keyboard">keyboard</option>
+  </select>
+  <label>What Are You Looking For</label>
+</div>
+
+<div *ngFor="let group of groups | async | lookingForPipe:filterByLookingFor" class="panel panel-default">
+  <div class="panel-body">
+    <h3 (click)="goToDetailPage(project)">Name: {{group.name}} </h3>
+    <h4>Looking For:</h4>
+    <p *ngFor="let lookingFor of group.lookingFor">{{lookingFor}}</p>
+    <h3>Genres:</h3>
+    <p *ngFor="let genre of group.genres">{{genre}}</p>
+  </div>
+</div>
+</div>

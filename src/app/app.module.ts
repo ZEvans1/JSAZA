@@ -34,6 +34,8 @@ import { CreateGroupComponent } from './create-group/create-group.component';
 import { InstrumentPipe } from './instrument.pipe';
 import { GenrePipe } from './genre.pipe';
 import { AvailablePipe } from './available.pipe';
+import { GroupSearchComponent } from './group-search/group-search.component';
+import { LookingForPipe } from './looking-for.pipe';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -54,7 +56,9 @@ export const firebaseConfig = {
     CreateGroupComponent,
     InstrumentPipe,
     GenrePipe,
-    AvailablePipe
+    AvailablePipe,
+    GroupSearchComponent,
+    LookingForPipe
   ],
   imports: [
     BrowserModule,
@@ -62,13 +66,9 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(masterFirebaseConfig),
-    AlertModule.forRoot(),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
 		MaterializeModule
-		BsDropdownModule.forRoot(),
-		TooltipModule.forRoot(),
-		ModalModule.forRoot()
   ],
   providers: [
     AuthService,
