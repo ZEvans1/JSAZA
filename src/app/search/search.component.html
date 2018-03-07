@@ -37,10 +37,9 @@
 
 <div *ngFor="let artist of artists | async | instrumentPipe:filterByInstrument | genrePipe:filterByGenre | availablePipe:filterByAvailable" class="panel panel-default card">
   <div class="panel-body">
-    <h3 (click)="goToDetailPage(project)">Name: {{artist.name}} </h3>
-    <h4>Instruments:</h4>
-    <p *ngFor="let instrument of artist.instruments">{{instrument}}</p>
-    <h3>Genres:</h3>
-    <p *ngFor="let genre of artist.genres">{{genre}}</p>
+    <img class="profImage" (click)="goToDetailPage(project)" src="{{artist.profileImage}}" alt="{{artist.name}}'s profile image'">
+    <h4 (click)="goToDetailPage(project)">Name: {{artist.name}} </h4>
+    <p>{{artist.tagline}}</p>
+
   </div>
 </div>
