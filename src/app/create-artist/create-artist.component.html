@@ -1,107 +1,119 @@
 <h1>Thanks for Deciding to Join!</h1>
-
-<form>
-  <div class="form-group">
-    <label for="Name">Name</label>
-    <input type="text" value="Test User" #newName>
-  </div>
-  <div class="form-group">
-    <label for="Email">Email</label>
-    <input type="email" value="testUser@email.com" #newEmail>
-  </div>
-  <div class="form-group">
-    <label for="Password">Password</label>
-    <input type="text" value="password" #newPassword>
-  </div>
-  <div class="form-group">
-    <label for="Location">Location</label>
-    <input type="text" value="Portland" #newCity>
-    <input type="text" value="Oregon" #newState>
-    <input type="text" value="97204" #newZip>
-  </div>
-  <div class="form-group">
-    <select #currentInstrument>
-      <option [attr.value]="Guitar">Guitar</option>
-      <option [attr.value]="Bass">Bass</option>
-      <option [attr.value]="Keyboards">Keyboards</option>
-      <option [attr.value]="Drums">Drums</option>
-      <option [attr.value]="Vocals">Vocals</option>
-    </select>
-    <button (click)="addNewInstrument(currentInstrument.value)">Add Another Instrument</button><br>
-    <div *ngIf="currentInstrument">
-      Current Instrumet: {{currentInstrument.value}}
+<div class="row">
+  <form materialize class="col s12">
+    <div class="row">
+      <h5>Personal Info</h5>
+      <div class="col s4">
+        <label for="Name">Name</label>
+        <input required type="text" value="Test User" #newName>
+      </div>
+      <div class="col s4">
+        <label for="Email">Email</label>
+        <input required type="email" value="testUser@email.com" #newEmail>
+      </div>
+      <div class="col s4">
+        <label for="Password">Password</label>
+        <input required type="text" value="password" #newPassword>
+      </div>
     </div>
-    <p>Added Instruments:</p>
-    <div *ngFor="let instrument of instruments">
-      {{instrument}}
-      <br>
+    <div class="row">
+      <div class="col s4">
+        <label for="Location">City</label>
+        <input required type="text" value="Portland" #newCity>
+      </div>
+      <div class="col s4">
+        <label for="Location">State</label>
+        <input required type="text" value="Oregon" #newState>
+      </div>
+      <div class="col s4">
+        <label for="Location">Zip</label>
+        <input required type="text" value="97204" #newZip>
+      </div>
     </div>
-    <br>
-  </div>
-  <div class="form-group">
-    <select #currentGenre>
-      <option [attr.value]="Rock">Rock</option>
-      <option [attr.value]="Jazz">Jazz</option>
-      <option [attr.value]="Classical">Classical</option>
-      <option [attr.value]="Country">Country</option>
-      <option [attr.value]="Pop">Pop</option>
-    </select>
-    <button (click)="addNewGenre(currentGenre.value)">Add Another Instrument</button><br>
-    <div *ngIf="currentGenre">
-      Current Genre: {{currentGenre.value}}
+    <div class="row">
+      <div class="col s12">
+        <label for="Bio">Bio</label>
+        <textarea required value="Bio" #newBio></textarea>
+      </div>
     </div>
-    <p>Added Genres:</p>
-    <div *ngFor="let genre of genres">
-      {{genre}}
-      <br>
+    <div class="row">
+      <h5>Music Profile</h5>
+      <div class="col s4">
+        <label for="">Instruments</label>
+        <select materialize="material_select" #currentInstrument>
+          <option [attr.value]="Guitar">Guitar</option>
+          <option [attr.value]="Bass">Bass</option>
+          <option [attr.value]="Keyboards">Keyboards</option>
+          <option [attr.value]="Drums">Drums</option>
+          <option [attr.value]="Vocals">Vocals</option>
+        </select>
+        <button (click)="addNewInstrument(currentInstrument.value)">Add Another Instrument</button><br>
+        <p>Added Instruments:</p>
+        <div *ngFor="let instrument of instruments">
+          {{instrument}}
+          <br>
+        </div>
+        <br>
+      </div>
+      <div class="col s4">
+        <label for="">Genres</label>
+        <select materialize="material_select" #currentGenre>
+          <option [attr.value]="Rock">Rock</option>
+          <option [attr.value]="Jazz">Jazz</option>
+          <option [attr.value]="Classical">Classical</option>
+          <option [attr.value]="Country">Country</option>
+          <option [attr.value]="Pop">Pop</option>
+        </select>
+        <button (click)="addNewGenre(currentGenre.value)">Add Another Instrument</button><br>
+        <p>Added Genres:</p>
+        <div *ngFor="let genre of genres">
+          {{genre}}
+          <br>
+        </div>
+        <br>
+      </div>
+      <div class="col s4">
+        <label for="LookingFor">Looking For</label>
+        <select materialize="material_select" #currentLookingFor>
+          <option [attr.value]="Guitar">Guitar</option>
+          <option [attr.value]="Bass">Bass</option>
+          <option [attr.value]="Keyboards">Keyboards</option>
+          <option [attr.value]="Drums">Drums</option>
+          <option [attr.value]="Vocals">Vocals</option>
+        </select>
+        <button (click)="addNewLookingFor(currentLookingFor.value)">Add</button>
+        <br>
+        Added to Looking For:
+        <div *ngFor="let lookingFor of allLookingFor">
+          {{lookingFor}}
+          <br>
+        </div>
+        <br>
+      </div>
     </div>
-    <br>
-  </div>
-  <div class="form-group">
-    <label for="Bio">Bio</label>
-    <textarea value="Bio" #newBio></textarea>
-  </div>
-  <div class="form-group">
-    <label for="LookingFor">Looking For</label>
-    <select #currentLookingFor>
-      <option [attr.value]="Guitar">Guitar</option>
-      <option [attr.value]="Bass">Bass</option>
-      <option [attr.value]="Keyboards">Keyboards</option>
-      <option [attr.value]="Drums">Drums</option>
-      <option [attr.value]="Vocals">Vocals</option>
-    </select>
-    <div *ngIf="currentLookingFor">
-      Looking For: {{currentLookingFor.value}}
+    <div class="form-group">
+      <label for="Available">Available</label>
+      <input required type="text" value="true" #newAvailable>
     </div>
-    <button (click)="addNewLookingFor(currentLookingFor.value)">Add</button>
-    <br>
-    Added to Looking For:
-    <div *ngFor="let lookingFor of allLookingFor">
-      {{lookingFor}}
+    <div class="form-group">
+      <label for="Groups">Groups</label>
+      <input required type="text" value="groupId" #newGroupId>
+      <input required type="text" value="groupRole" #newGroupRole>
+      <input required type="text" value="groupStartDate" #newGroupStartDate>
+      <input required type="text" value="groupEndDate" #newGroupEndDate>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="Available">Available</label>
-    <input type="text" value="true" #newAvailable>
-  </div>
-  <div class="form-group">
-    <label for="Groups">Groups</label>
-    <input type="text" value="groupId" #newGroupId>
-    <input type="text" value="groupRole" #newGroupRole>
-    <input type="text" value="groupStartDate" #newGroupStartDate>
-    <input type="text" value="groupEndDate" #newGroupEndDate>
-  </div>
-  <div class="form-group">
-    <label for="imageURL">Profile image url</label>
-    <input type="text" value="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" #newProfileImg>
-  </div>
-  <div class="form-group">
-    <label for="gallery">Gallery img urls</label>
-    <input type="text" value="galleryURLone" #newGalleryURL1>
-    <input type="text" value="galleryURLtwo" #newGalleryURL2>
-    <input type="text" value="galleryURLthree" #newGalleryURL3>
-  </div>
-  <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newCity.value, newState.value, newZip.value, newBio.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
-</form>
+    <div class="form-group">
+      <label for="imageURL">Profile image url</label>
+      <input required type="text" value="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" #newProfileImg>
+    </div>
+    <div class="form-group">
+      <label for="gallery">Gallery img urls</label>
+      <input required type="text" value="galleryURLone" #newGalleryURL1>
+      <input required type="text" value="galleryURLtwo" #newGalleryURL2>
+      <input required type="text" value="galleryURLthree" #newGalleryURL3>
+    </div>
+    <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newCity.value, newState.value, newZip.value, newBio.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
+  </form>
+</div>
 
 <button (click)="testFunc()">testFunc()</button>
