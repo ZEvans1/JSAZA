@@ -1,46 +1,46 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Artist } from './artist.model';
+import { Group } from './group.model';
 
 @Pipe({
-  name: 'instrumentPipe',
+  name: 'lookingForPipe',
   pure: false
 })
-export class InstrumentPipe implements PipeTransform {
+export class LookingForPipe implements PipeTransform {
 
-  transform(input: Artist[], instrumentSelection) {
-    var output: Artist[] = [];
-    switch (instrumentSelection) {
+  transform(input: Group[], lookingForSelection) {
+    var output: Group[] = [];
+    switch (lookingForSelection) {
       case "drums":
         for (let i = 0; i < input.length; i++) {
-          if (input[i].instruments.includes(instrumentSelection)) {
+          if (input[i].lookingFor.includes(lookingForSelection)) {
             output.push(input[i]);
           }
         }
         break;
       case "bass":
         for (let i = 0; i < input.length; i++) {
-          if (input[i].instruments.includes(instrumentSelection)) {
+          if (input[i].lookingFor.includes(lookingForSelection)) {
             output.push(input[i]);
           }
         }
         break;
       case "guitar":
         for (let i = 0; i < input.length; i++) {
-          if (input[i].instruments.includes(instrumentSelection)) {
+          if (input[i].lookingFor.includes(lookingForSelection)) {
             output.push(input[i]);
           }
         }
         break;
       case "vocals":
         for (let i = 0; i < input.length; i++) {
-          if (input[i].instruments.includes(instrumentSelection)) {
+          if (input[i].lookingFor.includes(lookingForSelection)) {
             output.push(input[i]);
           }
         }
         break;
       case "keyboard":
         for (let i = 0; i < input.length; i++) {
-          if (input[i].instruments.includes(instrumentSelection)) {
+          if (input[i].lookingFor.includes(lookingForSelection)) {
             output.push(input[i]);
           }
         }
@@ -51,4 +51,5 @@ export class InstrumentPipe implements PipeTransform {
     }
     return output;
   }
+
 }

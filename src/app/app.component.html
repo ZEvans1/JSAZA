@@ -4,6 +4,7 @@
     <li class="navitems"><a class="navlinks" href="create-group">Create Group</a></li>
     <li class="navitems"><a class="navlinks" href="artist-search">Search</a></li>
 
+
     <div id="welcome" class="inline-block" *ngIf="this.authService.isLoggedIn()">Welcome, {{ displayName }}!</div>
 
     <div *ngIf="this.authService.isLoggedIn() === false">
@@ -13,10 +14,6 @@
     <li><button class="account navlinks" *ngIf="this.authService.isLoggedIn()" routerLink="" type="button" name="logout" (click)="this.authService.logout()">Log Out</button></li>
   </ul>
 </div>
-
-<!-- <h1 *ngIf="this.authService.isLoggedIn()" id="welcome">
-  Welcome, {{ displayName }}!
-</h1> -->
 
 <div class="container">
   <router-outlet></router-outlet>
