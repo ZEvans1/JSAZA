@@ -1,33 +1,68 @@
 <h2>Group Search</h2>
 
 <div class="row">
-<div  class="input-field col s4">
-  <select materialize="material_select" (change)="onChangeLookingFor($event.target.value)">
-    <option value="All">all</option>
-    <option value="Drums">drums</option>
-    <option value="Bass">bass</option>
-    <option value="Guitar">guitar</option>
-    <option value="Vocals">vocals</option>
-    <option value="Keyboard">keyboard</option>
-  </select>
-  <label>What Are You Looking For</label>
-</div>
-<div  class="input-field col s4">
-  <select materialize="material_select" (change)="onChangeAvailable($event.target.value)">
-    <option value="all">all</option>
-    <option value="true">yes</option>
-    <option value="false">no</option>
-  </select>
-  <label>Filter by Availability</label>
-</div>
-
-<div *ngFor="let group of groups | async | lookingForPipe:filterByLookingFor | availableGroupPipe:filterByAvailable" class="panel panel-default">
-  <div class="panel-body">
-    <h3 (click)="goToDetailPage(project)">Name: {{group.name}} </h3>
-    <h4>Looking For:</h4>
-    <p *ngFor="let lookingFor of group.lookingFor">{{lookingFor}}</p>
-    <h3>Genres:</h3>
-    <p *ngFor="let genre of group.genres">{{genre}}</p>
+  <div class="input-field col s3">
+    <select materialize="material_select" (change)="onChangeLookingFor($event.target.value)">
+      <option value="All">All</option>
+      <option value="drums">Drums</option>
+      <option value="bass">Bass</option>
+      <option value="guitar">Guitar</option>
+      <option value="vocals">Vocals</option>
+      <option value="keyboard">Keyboard</option>
+    </select>
+    <label>What Are You Looking For</label>
+  </div>
+  <div class="input-field col s3">
+    <select materialize="material_select" (change)="onChangeAvailable($event.target.value)">
+      <option value="all">all</option>
+      <option value="true">yes</option>
+      <option value="false">no</option>
+    </select>
+    <label>Filter by Availability</label>
+  </div>
+  <div class="input-field col s3">
+    <select materialize="material_select" (change)="onChangeGenre($event.target.value)">
+      <option value="all">all</option>
+      <option value="pop">pop</option>
+      <option value="rock">rock</option>
+      <option value="country">country</option>
+      <option value="jazz">jazz</option>
+      <option value="classical">classical</option>
+      <option value="metal">metal</option>
+      <option value="blues">blues</option>
+    </select>
+    <label>Filter by Genre</label>
   </div>
 </div>
+<div *ngFor="let group of groups | async | lookingForPipe:filterByLookingFor | availableGroupPipe:filterByAvailable | genreGroupPipe:filterByGenre" class="panel panel-default">
+  <div class="card large col s4">
+    <div *ngIf="group.profileImage" class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{group.profileImage}}">
+    </div>
+    <div class="card-content">
+      <div class="row">
+        <h5 (click)="goToDetailPage(project)" class="title">{{group.name}} </h5>
+        <div class="col s3">
+          <p>Looking For:</p>
+          <p *ngFor="let lookingFor of group.lookingFor"><span *ngIf="lookingFor">{{lookingFor}}</span></p>
+        </div>
+        <div class="col s3">
+          <p>Genres:</p>
+          <p *ngFor="let currentGenre of group.genre"><span *ngIf="currentGenre">{{currentGenre}}</span></p>
+        </div>
+        <div class="col s3">
+          <div *ngIf="group.available">
+            <p><strong>Available</strong><p>
+          </div>
+          <div *ngIf="!group.available">
+            <p><strong>Not Available</strong></p>
+          </div>
+        </div>
+        <div class="col s3">
+          <p>About:</p>
+          {{group.tagline}}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
