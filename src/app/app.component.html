@@ -1,26 +1,22 @@
-<!-- <div class="top-nav">
-      <button class="account btn btn-link" routerLink="create-artist" id="email-button" type="button" name="button"><strong>SIGN UP</strong></button>
-      <button class="account btn btn-link" routerLink="" id="signin-button" type="button" name="button"><strong>SIGN IN</strong></button> -->
+<div class="top-nav">
       <ul class="navbar">
       <li class="navitems"><a class="navlinks" href="#">Link 1</a></li>
       <li class="navitems"><a class="navlinks" href="#">Link 2</a></li>
       <li class="navitems"><a class="navlinks" href="#">Link 3</a></li>
       <li class="navitems"><a class="navlinks" href="#">Link 4</a></li>
       <li class="navitems"><a class="navlinks" href="#">Link 5</a></li>
-      <button class="account btn btn-link" routerLink="create-artist" id="email-button" type="button" name="button"><strong>SIGN UP</strong></button>
-      <button class="account btn btn-link" routerLink="" id="signin-button" type="button" name="button"><strong>SIGN IN</strong></button>
-      <button class="group" routerLink="create-group" id="group-button" type="button"><strong>CREATE GROUP </strong></button>
+      <div *ngIf="this.authService.isLoggedIn() === false">
+        <button class="account navlinks" routerLink="create-artist" id="email-button" type="button"><strong>SIGN UP</strong></button>
+        <button class="account navlinks" routerLink="" id="signin-button" type="button"><strong>SIGN IN</strong></button>
+      </div>
+      <button class="account navlinks" *ngIf="this.authService.isLoggedIn()" routerLink="" type="button" name="logout" (click)="this.authService.logout()">Log Out</button>
     </ul>
-
+</div>
 
 <h1 *ngIf="this.authService.isLoggedIn()">
   Welcome, {{ displayName }}!
-  <img src="{{ photoURL }}" width="100px">
 </h1>
 
 <div class="container">
   <router-outlet></router-outlet>
 </div>
-
-
-<!-- play_arrow -->

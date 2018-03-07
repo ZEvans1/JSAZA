@@ -1,8 +1,17 @@
-.account{
+.navbar .account{
   float: right;
   height: 100%;
-  /*color: #FFFFFF*/
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
+
+.navbar .account:hover{
+  color: white;
+}
+
 .top-nav{
   /*border-bottom: 1px solid lightgrey;
   overflow: auto;
