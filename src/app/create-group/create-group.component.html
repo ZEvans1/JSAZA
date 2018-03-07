@@ -1,78 +1,97 @@
 <h1>Thanks for Deciding to Join!</h1>
 
-<form materialize>
-  <div class="form-group">
-    <label for="Name">Name</label>
-    <input type="text" value="Test User" #newName>
+<form materialize class="col s12">
+  <div class="row">
+    <h4>Personal Info</h4>
+    <div class="col s4">
+      <label for="Name">Name</label>
+      <input type="text" value="Test User" #newName>
+    </div>
+    <div class="col s4">
+      <label for="Email">Email</label>
+      <input type="email" value="testUser@email.com" #newEmail>
+    </div>
+    <div class="col s4">
+      <label for="Password">Password</label>
+      <input type="text" value="password" #newPassword>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="Email">Email</label>
-    <input type="email" value="testUser@email.com" #newEmail>
+  <div class="row">
+    <div class="col s4">
+      <label for="Location">City</label>
+      <input required type="text" value="Portland" #newCity>
+    </div>
+    <div class="col s4">
+      <label for="Location">State</label>
+      <input required type="text" value="Oregon" #newState>
+    </div>
+    <div class="col s4">
+      <label for="Location">Zip</label>
+      <input required type="text" value="97204" #newZip>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="Password">Password</label>
-    <input type="text" value="password" #newPassword>
+  <div class="row">
+    <div class="col s4">
+      <label for="Bio">Bio</label>
+      <textarea value="Bio" #newBio></textarea>
+    </div>
+    <div class="col s4">
+      <label for="Tagline">Tagline</label>
+      <textarea value="Tagline" #newTagline></textarea>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="Location">Location</label>
-    <input type="text" value="Portland" #newCity>
-    <input type="text" value="Oregon" #newState>
-    <input type="text" value="97204" #newZip>
-  </div>
-  <div class="form-group">
-    <label for="Members">Members</label>
-    <input type="text" value="member" #currentMember>
-  </div>
-  <button (click)="addNewMember(currentMember.value)">Add Another Member</button>
-  <br>
-  <div *ngFor="let member of members">
-    {{member}}
-    <br>
-  </div>
-  <div class="form-group">
-    <label for="genre">Genre(s)</label>
-    <select name="genre" [(ngModel)]="genres" multiple materialize="material_select">
-      <option value="" disabled selected>Choose Your Genre(s)</option>
-      <option [attr.value]="rock">rock</option>
-      <option [attr.value]="jazz">jazz</option>
-      <option [attr.value]="classical">classical</option>
-      <option [attr.value]="country">country</option>
-      <option [attr.value]="pop">pop</option>
-    </select>
-    <p>Added Genres:</p>
-    <div *ngFor="let genre of genres">
-      {{genre}}
+  <div class="row">
+    <h4>Music Profile</h4>
+    <div class="col s3">
+      <label for="Members">Members</label>
+      <input type="text" value="member" #currentMember>
+      <button (click)="addNewMember(currentMember.value)">Add Another Member</button>
+    </div>
+    <div class="col s3">
+      <div *ngFor="let member of members">
+        {{member}}
+        <br>
+      </div>
+    </div>
+    <div class="col s3">
+      <label for="genre">Genre(s)</label>
+      <select name="genre" [(ngModel)]="genres" multiple materialize="material_select">
+        <option value="" disabled selected>Choose Genre(s)</option>
+        <option [attr.value]="rock">rock</option>
+        <option [attr.value]="jazz">jazz</option>
+        <option [attr.value]="classical">classical</option>
+        <option [attr.value]="country">country</option>
+        <option [attr.value]="pop">pop</option>
+      </select>
+      <p>Added Genres:</p>
+      <div *ngFor="let genre of genres">
+        {{genre}}
+        <br>
+      </div>
       <br>
     </div>
-    <br>
   </div>
-  <div class="form-group">
-    <label for="Bio">Bio</label>
-    <textarea value="Bio" #newBio></textarea>
-  </div>
-  <div class="form-group">
-    <label for="Tagline">Tagline</label>
-    <textarea value="Tagline" #newTagline></textarea>
-  </div>
-  <div class="form-group">
-    <label for="LookingFor">What are you looking for?</label>
-    <select name="lookingFor" [(ngModel)]="allLookingFor" multiple materialize="material_select">
-      <option value="" disabled selected>What are you looking for?</option>
-      <option [attr.value]="guitar">guitar</option>
-      <option [attr.value]="bass">bass</option>
-      <option [attr.value]="keyboard">keyboard</option>
-      <option [attr.value]="drums">drums</option>
-      <option [attr.value]="vocals">vocals</option>
-    </select>
-    <br>
-    Added to Looking For:
-    <div *ngFor="let lookingFor of allLookingFor">
-      {{lookingFor}}
+  <div class="row">
+    <div class="col s6">
+      <label for="LookingFor">What are you looking for?</label>
+      <select name="lookingFor" [(ngModel)]="allLookingFor" multiple materialize="material_select">
+        <option value="" disabled selected>What are you looking for?</option>
+        <option [attr.value]="guitar">guitar</option>
+        <option [attr.value]="bass">bass</option>
+        <option [attr.value]="keyboard">keyboard</option>
+        <option [attr.value]="drums">drums</option>
+        <option [attr.value]="vocals">vocals</option>
+      </select>
+      <br>
+      Added to Looking For:
+      <div *ngFor="let lookingFor of allLookingFor">
+        {{lookingFor}}
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="Available">Available</label>
-    <input type="text" value="true" #newAvailable>
+    <div class="col s6">
+      <label for="Available">Available</label>
+      <input type="text" value="true" #newAvailable>
+    </div>
   </div>
   <div class="form-group">
     <label for="imageURL">Profile image url</label>
