@@ -12,14 +12,14 @@ export class AvailableGroupPipe implements PipeTransform {
     switch (availableSelection) {
       case "false":
         for (let i = 0; i < input.length; i++) {
-          if (input[i].available.toLowerCase() === "false") {
+          if (input[i].available.toString().toLowerCase() === "false") {
             output.push(input[i]);
           }
         }
         break;
         case "true":
           for (let i = 0; i < input.length; i++) {
-            if (input[i].available.toLowerCase() === "true") {
+            if (input[i].available.toString().toLowerCase() === "true") {
               output.push(input[i]);
             }
           }
