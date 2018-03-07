@@ -43,15 +43,15 @@
     <div class="row">
       <h4>Music Profile</h4>
       <div class="col s4">
-        <label for="">Instruments</label>
-        <select materialize="material_select" #currentInstrument>
+        <label for="instruments">Instruments</label>
+        <select materialize="material_select" name="instruments" [(ngModel)]="instruments" multiple>
+          <option value="" disabled selected>Choose Your Instrument(s)</option>
           <option [attr.value]="guitar">guitar</option>
           <option [attr.value]="bass">bass</option>
           <option [attr.value]="keyboard">keyboard</option>
           <option [attr.value]="drums">drums</option>
           <option [attr.value]="vocals">vocals</option>
         </select>
-        <button (click)="addNewInstrument(currentInstrument.value)">Add Another Instrument</button><br>
         <p>Added Instruments:</p>
         <div *ngFor="let instrument of instruments">
           {{instrument}}
@@ -60,15 +60,15 @@
         <br>
       </div>
       <div class="col s4">
-        <label for="">Genres</label>
-        <select materialize="material_select" #currentGenre>
+        <label for="genre">Genre(s)</label>
+        <select name="genre" [(ngModel)]="genres" multiple materialize="material_select">
+          <option value="" disabled selected>Choose Your Genre(s)</option>
           <option [attr.value]="rock">rock</option>
           <option [attr.value]="jazz">jazz</option>
           <option [attr.value]="classical">classical</option>
           <option [attr.value]="country">country</option>
           <option [attr.value]="pop">pop</option>
         </select>
-        <button (click)="addNewGenre(currentGenre.value)">Add Another Instrument</button><br>
         <p>Added Genres:</p>
         <div *ngFor="let genre of genres">
           {{genre}}
@@ -77,20 +77,19 @@
         <br>
       </div>
       <div class="col s4">
-        <label for="LookingFor">Looking For</label>
-        <select materialize="material_select" #currentLookingFor>
+        <label for="LookingFor">What are you looking for?</label>
+        <select name="lookingFor" [(ngModel)]="allLookingFor" multiple materialize="material_select">
+          <option value="" disabled selected>What are you looking for?</option>
           <option [attr.value]="guitar">guitar</option>
           <option [attr.value]="bass">bass</option>
           <option [attr.value]="keyboard">keyboard</option>
           <option [attr.value]="drums">drums</option>
           <option [attr.value]="vocals">vocals</option>
         </select>
-        <button (click)="addNewLookingFor(currentLookingFor.value)">Add</button>
         <br>
         Added to Looking For:
         <div *ngFor="let lookingFor of allLookingFor">
           {{lookingFor}}
-          <br>
         </div>
         <br>
       </div>

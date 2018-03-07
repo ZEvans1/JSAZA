@@ -3,6 +3,7 @@ import { AuthService } from './../services/auth.service';
 import { ArtistService} from './../services/artist.service';
 import { Artist } from './../artist.model';
 import { Router } from '@angular/router';
+import {MaterializeDirective} from "angular2-materialize";
 
 @Component({
   selector: 'app-create-artist',
@@ -16,29 +17,14 @@ import { Router } from '@angular/router';
 export class CreateArtistComponent implements OnInit {
 
   instruments: string[] = [];
-  currentInstrument: string = "";
 
   genres: string[] = [];
-  currentGenre: string = "";
 
   allLookingFor: string[] = [];
-  currentLookingFor: string = "";
 
   constructor(private router: Router, private authService: AuthService, private artistService: ArtistService) { }
 
   ngOnInit() {
-  }
-
-  addNewInstrument(instrument) {
-    this.instruments.push(instrument);
-  }
-
-  addNewGenre(genre) {
-    this.genres.push(genre);
-  }
-
-  addNewLookingFor(lookingFor) {
-    this.allLookingFor.push(lookingFor);
   }
 
   submitForm(newName: string, newEmail: string, newPassword: string, newCity: string, newState: string, newZip: string, newTagline: string, newBio: string, newAvailable: boolean, newGroupId: string, newGroupRole: string, newGroupStartDate: string, newGroupEndDate: string, newProfileImg: string, newGalleryURL1: string, newGalleryURL2: string, newGalleryURL3: string) {
@@ -56,7 +42,7 @@ export class CreateArtistComponent implements OnInit {
       verified: false
     }
     let that = this;
-    let newArtist = new Artist(newName, location, this.instruments, this.genres,newTagline, newBio, this.allLookingFor, newAvailable, groups);
+    let newArtist = new Artist(newName, location, this.instruments, this.genres, newTagline, newBio, this.allLookingFor, newAvailable, groups);
     newArtist.profileImage = newProfileImg;
     newArtist.gallery = [newGalleryURL1, newGalleryURL2, newGalleryURL3];
     setTimeout(function() {
