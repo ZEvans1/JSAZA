@@ -34,35 +34,13 @@
     <label>Filter by Genre</label>
   </div>
 </div>
-<div *ngFor="let group of groups | async | lookingForPipe:filterByLookingFor | availableGroupPipe:filterByAvailable | genreGroupPipe:filterByGenre" class="panel panel-default">
-  <div class="card large col s4">
-    <div *ngIf="group.profileImage" class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="{{group.profileImage}}">
+
+<div *ngFor="let group of groups | async | lookingForPipe:filterByLookingFor | availableGroupPipe:filterByAvailable | genreGroupPipe:filterByGenre" class="card" routerLink="../view-user/{{group.$key}}">
+  <div class="panel panel-body">
+    <div *ngIf="group.profileImage">
+      <img class="profImage" src="{{group.profileImage}}" alt="{{group.name}}'s profile image">
     </div>
-    <div class="card-content">
-      <div class="row">
-        <h5 (click)="goToDetailPage(project)" class="title">{{group.name}} </h5>
-        <div class="col s3">
-          <p>Looking For:</p>
-          <p *ngFor="let lookingFor of group.lookingFor"><span *ngIf="lookingFor">{{lookingFor}}</span></p>
-        </div>
-        <div class="col s3">
-          <p>Genres:</p>
-          <p *ngFor="let currentGenre of group.genre"><span *ngIf="currentGenre">{{currentGenre}}</span></p>
-        </div>
-        <div class="col s3">
-          <div *ngIf="group.available">
-            <p><strong>Available</strong><p>
-          </div>
-          <div *ngIf="!group.available">
-            <p><strong>Not Available</strong></p>
-          </div>
-        </div>
-        <div class="col s3">
-          <p>About:</p>
-          {{group.tagline}}
-        </div>
-      </div>
-    </div>
+    <h5>{{group.name}}</h5>
+    <p>{{group.tagline}}</p>
   </div>
 </div>
