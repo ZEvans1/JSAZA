@@ -1,5 +1,20 @@
-<p>
+<!-- <p>
   dashboard works!
 </p>
-<a class="waves-effect waves-light btn" (click)="this.authService.logout()">logout <i class="material-icons">stop</i></a>
-<button (click)="logUID()">log uid</button>
+<a class="waves-effect waves-light btn" (click)="this.authService.logout()">logout <i class="material-icons">stop</i></a> -->
+
+
+<div class="card">
+  <div class="card-image waves-effect waves-block waves-light">
+    <img class="activator" src="{{artistToDisplay.profileImage}}">
+  </div>
+  <div class="card-content">
+    <span class="card-title activator grey-text text-darken-4">{{artistToDisplay.name}}<i class="material-icons right">more_vert</i></span>
+    <p>{{artistToDisplay.tagline}}</p>
+    <button (click)="button()">button</button>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">{{artistToDisplay.name}}<i class="material-icons right">close</i></span>
+    <p>{{artistToDisplay.bio}}</p>
+  </div>
+</div>

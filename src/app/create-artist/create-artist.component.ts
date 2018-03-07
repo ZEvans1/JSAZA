@@ -61,7 +61,7 @@ export class CreateArtistComponent implements OnInit {
     newArtist.gallery = [newGalleryURL1, newGalleryURL2, newGalleryURL3];
     setTimeout(function() {
       that.artistService.addArtist(newArtist, that.authService.userDetails.uid);
-      that.router.navigate(['dashboard']);
+      that.router.navigate(['dashboard/' + this.authService.userDetails.uid]);
       }, 2000);
     ;
 

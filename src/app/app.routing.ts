@@ -14,7 +14,7 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'dashboard',
+    path: 'dashboard/:id',
     component: DashboardComponent
   },
   {
