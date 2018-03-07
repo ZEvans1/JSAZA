@@ -5,6 +5,7 @@ import { Artist } from './../artist.model';
 import { Router } from '@angular/router';
 import { Group } from './../group.model';
 import { GroupService } from "./../services/group.service";
+import {MaterializeDirective} from "angular2-materialize";
 
 @Component({
   selector: 'app-create-group',
@@ -19,10 +20,8 @@ import { GroupService } from "./../services/group.service";
 export class CreateGroupComponent implements OnInit {
 
   genres: string[] = [];
-  currentGenre: string = "";
 
   allLookingFor: string[] = [];
-  currentLookingFor: string = "";
 
   members: string[] = [];
   currentMember: string = "";
@@ -34,14 +33,6 @@ export class CreateGroupComponent implements OnInit {
 
   addNewMember(member) {
     this.members.push(member);
-  }
-
-  addNewGenre(genre) {
-    this.genres.push(genre);
-  }
-
-  addNewLookingFor(lookingFor) {
-    this.allLookingFor.push(lookingFor);
   }
 
   submitForm(newName: string, newEmail: string, newPassword: string, newCity: string, newState: string, newZip: string, newTagline: string, newBio: string, newAvailable: boolean, newProfileImg: string, newGalleryURL1: string, newGalleryURL2: string, newGalleryURL3: string) {
