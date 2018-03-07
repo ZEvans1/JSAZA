@@ -1,6 +1,6 @@
 
 export class Artist {
-  profileImage: string = "";
+  profileImage: string = "https://www.bookmydesign.com/auth-image/medium/blank-user.png?resize=202%2C60";
   gallery: string[] = [""];
   test: false;
   messages: Object[] = [
