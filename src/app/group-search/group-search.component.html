@@ -3,17 +3,25 @@
 <div class="row">
 <div  class="input-field col s4">
   <select materialize="material_select" (change)="onChangeLookingFor($event.target.value)">
-    <option value="all">all</option>
-    <option value="drums">drums</option>
-    <option value="bass">bass</option>
-    <option value="guitar">guitar</option>
-    <option value="vocals">vocals</option>
-    <option value="keyboard">keyboard</option>
+    <option value="All">all</option>
+    <option value="Drums">drums</option>
+    <option value="Bass">bass</option>
+    <option value="Guitar">guitar</option>
+    <option value="Vocals">vocals</option>
+    <option value="Keyboard">keyboard</option>
   </select>
   <label>What Are You Looking For</label>
 </div>
+<div  class="input-field col s4">
+  <select materialize="material_select" (change)="onChangeAvailable($event.target.value)">
+    <option value="all">all</option>
+    <option value="true">yes</option>
+    <option value="false">no</option>
+  </select>
+  <label>Filter by Availability</label>
+</div>
 
-<div *ngFor="let group of groups | async | lookingForPipe:filterByLookingFor" class="panel panel-default">
+<div *ngFor="let group of groups | async | lookingForPipe:filterByLookingFor | availableGroupPipe:filterByAvailable" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(project)">Name: {{group.name}} </h3>
     <h4>Looking For:</h4>

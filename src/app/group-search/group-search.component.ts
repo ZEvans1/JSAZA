@@ -11,6 +11,7 @@ import { MaterializeModule } from "angular2-materialize";
 export class GroupSearchComponent implements OnInit {
   groups;
   filterByLookingFor: string = "all";
+  filterByAvailable: string = "all";
   constructor(private authService: AuthService, private groupService: GroupService) { }
 
   ngOnInit() {
@@ -19,6 +20,10 @@ export class GroupSearchComponent implements OnInit {
 
   onChangeLookingFor(optionFromMenu) {
     this.filterByLookingFor = optionFromMenu;
+  }
+
+  onChangeAvailable(optionFromMenu) {
+    this.filterByAvailable = optionFromMenu;
   }
 
 }
