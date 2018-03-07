@@ -1,21 +1,22 @@
 <div class="top-nav">
-      <ul class="navbar">
-      <li class="navitems"><a class="navlinks" href="#">Link 1</a></li>
-      <li class="navitems"><a class="navlinks" href="#">Link 2</a></li>
-      <li class="navitems"><a class="navlinks" href="#">Link 3</a></li>
-      <li class="navitems"><a class="navlinks" href="#">Link 4</a></li>
-      <li class="navitems"><a class="navlinks" href="#">Link 5</a></li>
-      <div *ngIf="this.authService.isLoggedIn() === false">
-        <button class="account navlinks" routerLink="create-artist" id="email-button" type="button"><strong>SIGN UP</strong></button>
-        <button class="account navlinks" routerLink="" id="signin-button" type="button"><strong>SIGN IN</strong></button>
-      </div>
-      <button class="account navlinks" *ngIf="this.authService.isLoggedIn()" routerLink="" type="button" name="logout" (click)="this.authService.logout()">Log Out</button>
-    </ul>
+  <ul class="navbar">
+    <li class="navitems"><a class="navlinks" href="dashboard">Dashboard</a></li>
+    <li class="navitems"><a class="navlinks" href="create-group">Create Group</a></li>
+    <li class="navitems"><a class="navlinks" href="artist-search">Search</a></li>
+
+    <div id="welcome" class="inline-block" *ngIf="this.authService.isLoggedIn()">Welcome, {{ displayName }}!</div>
+
+    <div *ngIf="this.authService.isLoggedIn() === false">
+      <li><button class="account navlinks" routerLink="create-artist" id="email-button" type="button"><strong>SIGN UP</strong></button></li>
+      <li><button class="account navlinks" routerLink="" id="signin-button" type="button"><strong>SIGN IN</strong></button></li>
+    </div>
+    <li><button class="account navlinks" *ngIf="this.authService.isLoggedIn()" routerLink="" type="button" name="logout" (click)="this.authService.logout()">Log Out</button></li>
+  </ul>
 </div>
 
-<h1 *ngIf="this.authService.isLoggedIn()">
+<!-- <h1 *ngIf="this.authService.isLoggedIn()" id="welcome">
   Welcome, {{ displayName }}!
-</h1>
+</h1> -->
 
 <div class="container">
   <router-outlet></router-outlet>

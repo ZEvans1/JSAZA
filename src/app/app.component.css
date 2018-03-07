@@ -1,3 +1,12 @@
+#welcome{
+  color: white;
+  height: 100%;
+  text-align: center;
+  float:left;
+  margin-left: 20%;
+  font-size: 2.5vh;
+}
+
 .navbar .account{
   float: right;
   height: 100%;
@@ -11,6 +20,7 @@
 .navbar .account:hover{
   color: white;
 }
+
 
 .top-nav{
   /*border-bottom: 1px solid lightgrey;
