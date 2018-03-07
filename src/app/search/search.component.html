@@ -33,8 +33,9 @@
   </select>
   <label>Filter by Availability</label>
 </div>
+</div>
 
-<div *ngFor="let artist of artists | async | instrumentPipe:filterByInstrument | genrePipe:filterByGenre | availablePipe:filterByAvailable" class="panel panel-default">
+<div *ngFor="let artist of artists | async | instrumentPipe:filterByInstrument | genrePipe:filterByGenre | availablePipe:filterByAvailable" class="panel panel-default card">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(project)">Name: {{artist.name}} </h3>
     <h4>Instruments:</h4>
@@ -42,5 +43,4 @@
     <h3>Genres:</h3>
     <p *ngFor="let genre of artist.genres">{{genre}}</p>
   </div>
-</div>
 </div>
