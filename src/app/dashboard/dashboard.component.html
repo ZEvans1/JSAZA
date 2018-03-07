@@ -3,18 +3,43 @@
 </p>
 <a class="waves-effect waves-light btn" (click)="this.authService.logout()">logout <i class="material-icons">stop</i></a> -->
 
+<div class="row">
+  <div class="card large col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{artistToDisplay.profileImage}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{artistToDisplay.name}}<i class="material-icons right">more_vert</i></span>
+      <hr>
+      <p>{{artistToDisplay.tagline}}</p>
+      <hr>
+      <p><em>{{artistToDisplay.location.city}}, {{artistToDisplay.location.state}}</em></p>
 
-<div class="card">
-  <div class="card-image waves-effect waves-block waves-light">
-    <img class="activator" src="{{artistToDisplay.profileImage}}">
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{artistToDisplay.name}}<i class="material-icons right">close</i></span>
+      <hr>
+      <p>{{artistToDisplay.bio}}</p>
+    </div>
   </div>
-  <div class="card-content">
-    <span class="card-title activator grey-text text-darken-4">{{artistToDisplay.name}}<i class="material-icons right">more_vert</i></span>
-    <p>{{artistToDisplay.tagline}}</p>
-    <button (click)="button()">button</button>
+
+  <div class="card large col s8">
+    <div class="card-content">
+      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+    </div>
+    <div class="card-tabs">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab"><a class="active" href="#test4">Instruments</a></li>
+        <li class="tab"><a href="#test5">Groups</a></li>
+        <li class="tab"><a href="#test6">Test 3</a></li>
+      </ul>
+    </div>
+    <div class="card-content grey lighten-4">
+      <div id="test4">This is text that goes in here when you click on a tab.</div>
+      <div id="test5">Test 2</div>
+      <div id="test6">Test 3</div>
+    </div>
   </div>
-  <div class="card-reveal">
-    <span class="card-title grey-text text-darken-4">{{artistToDisplay.name}}<i class="material-icons right">close</i></span>
-    <p>{{artistToDisplay.bio}}</p>
-  </div>
+
+
 </div>

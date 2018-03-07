@@ -9,11 +9,13 @@ import { AuthService } from './services/auth.service';
 export class AppComponent implements OnInit {
 	displayName;
   photoURL;
+  uid;
 	constructor(private authService: AuthService) { }
 	ngOnInit() {
 		this.authService.user.subscribe(dataLastEmmitedFromObserver => {
 			this.displayName = dataLastEmmitedFromObserver.displayName;
       this.photoURL = dataLastEmmitedFromObserver.photoURL;
+      this.uid = dataLastEmmitedFromObserver.uid;
 		});
 	}
 

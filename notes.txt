@@ -1,7 +1,6 @@
 Stuff to do:
 
 Forms:
--multiple select
 -switches
 -formatting
 
