@@ -65,6 +65,6 @@
   </div>
   <div class="modal-footer">
     <a class="waves-effect waves-green btn-flat" (click)="closeModal()">Cancel</a>
-    <a class="modal-action modal-close waves-effect waves-green btn-flat" (click)="sendMessage(messageContent.value)">Send</a>
+    <a class="modal-action modal-close waves-effect waves-green btn-flat" (click)="sendMessage(messageContent.value); messageContent.value='';">Send</a>
   </div>
 </div>
