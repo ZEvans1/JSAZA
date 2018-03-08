@@ -3,8 +3,10 @@
   margin-top: 2%;
   background-color: #ecf2f9;
   text-align: center;
-  max-width: 30vh;
-  margin-left: 30%;
+  width: 20vh;
+  float: left;
+  margin: 15px;
+  overflow: auto;
 }
 
 .card:hover{

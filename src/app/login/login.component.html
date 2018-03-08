@@ -1,11 +1,7 @@
 <div class="main__body">
-  <div class="container">
-
-    <div class="login__page">
       <div class="row">
-        <div class="col-md-4"></div>
-        <div class="card col-md-4 ">
-          <div class="login__card">
+        <div class="col m4"></div>
+        <div class="card col m4 grey darken-3">
             <div class="card-block">
 
               <form name="userform" method="post" #formCtrl="ngForm">
@@ -19,20 +15,16 @@
                   <input class="loginInput" [(ngModel)]="user.password" type="password" class="form-control" name="password" placeholder="Password" required>
                   <br>
 
-                  <button id="submitBtn" (click)="signInWithEmail()" type="button" class="btn btn-outline-primary btn-lg" style="margin-bottom: 20px " [disabled]="formCtrl.form.invalid">Login</button>
+                  <a id="submitBtn" (click)="signInWithEmail()" class="waves-effect waves-light btn grey darken-2" style="margin-bottom: 20px ">Login</a>
+                  <a class="waves-effect waves-light btn teal darken-1" routerLink='create-artist'>Create Artist Account</a>
+                  <a class="waves-effect waves-light btn teal darken-1" routerLink='create-group'>Create Group Account</a>
                 </div>
 
 
               </form>
-              <button class="btn btn-link create" routerLink='create-artist'>Create Account</button>
 
             </div>
-          </div>
-
         </div>
-      </div>
       <!-- end card -->
-
-    </div>
     <!-- end container -->
   </div>

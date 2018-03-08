@@ -11,4 +11,14 @@
 #messageButton {
   display: block;
   margin-top: 5px;
+  background-color: #424242;
+  color: #ee6e73;
+}
+
+.card {
+  background-color: #758897;
+}
+
+.card-reveal {
+  background-color: #729395;
 }

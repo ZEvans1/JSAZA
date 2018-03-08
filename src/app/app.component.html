@@ -8,10 +8,10 @@
     <div id="welcome" class="inline-block" *ngIf="this.authService.isLoggedIn()">Welcome, {{ displayName }}!</div>
 
     <div *ngIf="this.authService.isLoggedIn() === false">
-      <li><button class="account navlinks" routerLink="create-artist" id="email-button" type="button"><strong>SIGN UP</strong></button></li>
-      <li><button class="account navlinks" routerLink="" id="signin-button" type="button"><strong>SIGN IN</strong></button></li>
+      <li><a class="account navlinks" routerLink="create-artist" id="email-button" type="button"><strong>SIGN UP</strong></a></li>
+      <li><a class="account navlinks" routerLink="" id="signin-button" type="button"><strong>SIGN IN</strong></a></li>
     </div>
-    <li><button class="account navlinks" *ngIf="this.authService.isLoggedIn()" routerLink="" type="button" name="logout" (click)="this.authService.logout()">Log Out</button></li>
+    <li><a class="account navlinks" *ngIf="this.authService.isLoggedIn()" routerLink="" type="button" name="logout" (click)="this.authService.logout()">Log Out</a></li>
   </ul>
 </div>
 

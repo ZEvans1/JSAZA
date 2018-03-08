@@ -1,4 +1,8 @@
-/*body {
-  background: linear-gradient(to bottom left, white, green);
+body {
+  background: linear-gradient(to top right, #000D28, #2C3F6A);
   height: 100vh;
-}*/
+}
+
+ul.dropdown-content.select-dropdown li span {
+    color: #ee6e73;
+}

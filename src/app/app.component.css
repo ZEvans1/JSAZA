@@ -1,24 +1,24 @@
 #welcome{
-  color: white;
+  color: #ee6e73;
   height: 100%;
   text-align: center;
   float:left;
   margin-left: 20%;
-  font-size: 2.5vh;
+  font-size: 2em;
 }
 
 .navbar .account{
   float: right;
   height: 100%;
   display: block;
-  color: black;
+  color: #ee6e73;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .navbar .account:hover{
-  color: white;
+  color: #ee6e73;
 }
 
 
@@ -34,7 +34,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #424242;
   position: fixed;
   top: 0;
   width: 100%;
@@ -49,7 +49,7 @@
 }
 .navlinks{
   display: block;
-  color: white;
+  color: #ee6e73;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;

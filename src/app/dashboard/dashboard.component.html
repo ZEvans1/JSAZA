@@ -4,7 +4,7 @@
 <a class="waves-effect waves-light btn" (click)="this.authService.logout()">logout <i class="material-icons">stop</i></a> -->
 
 <div class="row">
-  <div class="card large col s4">
+  <div class="card large col l4">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="{{artistToDisplay.profileImage}}">
     </div>
@@ -25,17 +25,17 @@
     </div>
   </div>
 
-  <div class="card large col s8">
+  <div class="card large col l8">
     <div class="card-content">
     </div>
     <div class="card-tabs">
-      <ul class="tabs tabs-fixed-width">
+      <ul class="tabs tabs-fixed-width grey darken-3">
         <li class="tab"><a class="active" href="#instruments">Instruments</a></li>
         <li class="tab"><a href="#groups">Groups</a></li>
         <li class="tab"><a href="#genres">Genres</a></li>
       </ul>
     </div>
-    <div class="card-content grey lighten-4">
+    <div class="card-content grey">
       <div id="instruments">
         <p *ngFor="let instrument of artistToDisplay.instruments">
           <img height="100px" style="float: left; padding: 10px" src="./../../assets/instrument-icons/{{instrument}}.png" alt="{{instrument}}" title="{{instrument}}">
