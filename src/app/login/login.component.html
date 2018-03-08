@@ -5,7 +5,7 @@
             <div class="card-block">
 
               <form name="userform" method="post" #formCtrl="ngForm">
-                <h2 id="signIn">Sign In</h2>
+                <h2 id="signIn">Sign Into <em>JSAZA</em></h2>
                 <div class="form-group">
                   <label for="email" required>Email</label>
                   <input class="loginInput" [(ngModel)]="user.email" type="email" class="form-control" name="email" placeholder="Email">
@@ -16,8 +16,8 @@
                   <br>
 
                   <a id="submitBtn" (click)="signInWithEmail()" class="waves-effect waves-light btn grey darken-2" style="margin-bottom: 20px ">Login</a>
-                  <a class="waves-effect waves-light btn teal darken-1" routerLink='create-artist'>Create Artist Account</a>
-                  <a class="waves-effect waves-light btn teal darken-1" routerLink='create-group'>Create Group Account</a>
+                  <a class="waves-effect waves-light btn create" routerLink='create-artist'>Create Artist Account</a>
+                  <a class="waves-effect waves-light btn create" routerLink='create-group'>Create Group Account</a>
                 </div>
 
 

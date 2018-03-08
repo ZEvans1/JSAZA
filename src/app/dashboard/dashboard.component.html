@@ -48,7 +48,7 @@
     <div class="card large col l8">
       <div class="card-content">
         <ul>
-          <li *ngFor="let message of artistToDisplay.messages">message: {{message.content}} from: {{this.getMessageName(message.senderId)}}</li>
+          <li *ngFor="let message of artistToDisplay.messages">{{message.content}}  <strong>|| from: {{this.getMessageName(message.senderId)}} </strong></li>
         </ul>
       </div>
 

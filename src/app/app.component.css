@@ -17,6 +17,12 @@
   text-decoration: none;
 }
 
+#watermark{
+  float: left;
+  position: fixed;
+  bottom: 0;
+}
+
 .navbar .account:hover{
   color: rgb(160, 160 ,160);
 }
