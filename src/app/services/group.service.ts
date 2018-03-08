@@ -47,8 +47,8 @@ export class GroupService {
     return this.database.object('groups/' + groupId);
   }
 
-  updateGroup(localUpdatedGroup) {
-    let groupInFirebase = this.getGroupById(localUpdatedGroup.$key);
+  updateGroup(localUpdatedGroup, uid: string) {
+    let groupInFirebase = this.getGroupById(uid);
     groupInFirebase.update({
       name: localUpdatedGroup.name,
       location: localUpdatedGroup.location,

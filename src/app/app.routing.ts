@@ -8,6 +8,7 @@ import { ViewUserComponent } from './view-user/view-user.component';
 import { SearchComponent } from './search/search.component';
 import { GroupSearchComponent } from './group-search/group-search.component'
 import { EditComponent } from './edit/edit.component';
+import { GroupEditComponent } from './group-edit/group-edit.component';
 import { GroupDashboardComponent } from './group-dashboard/group-dashboard.component';
 
 const appRoutes: Routes = [
@@ -46,6 +47,10 @@ const appRoutes: Routes = [
   {
     path: 'edit/:id',
     component: EditComponent
+  },
+  {
+    path: 'group-edit/:id',
+    component: GroupEditComponent
   },
   {
     path: 'group-dashboard/:id',
