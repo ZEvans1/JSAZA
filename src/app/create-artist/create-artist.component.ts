@@ -50,7 +50,7 @@ export class CreateArtistComponent implements OnInit {
     setTimeout(function() {
       that.artistService.addArtist(newArtist, that.authService.userDetails.uid);
       that.router.navigate(['dashboard/' + this.authService.userDetails.uid]);
-      }, 2000);
+    }, 1000);
     ;
 
   }

@@ -38,6 +38,7 @@ import { GroupSearchComponent } from './group-search/group-search.component';
 import { LookingForPipe } from './looking-for.pipe';
 import { AvailableGroupPipe } from './available-group.pipe';
 import { GenreGroupPipe } from './genre-group.pipe';
+import { EditComponent } from './edit/edit.component';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -62,7 +63,8 @@ export const firebaseConfig = {
     GroupSearchComponent,
     LookingForPipe,
     AvailableGroupPipe,
-    GenreGroupPipe
+    GenreGroupPipe,
+    EditComponent
   ],
   imports: [
     BrowserModule,
