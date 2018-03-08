@@ -40,6 +40,7 @@ import { AvailableGroupPipe } from './available-group.pipe';
 import { GenreGroupPipe } from './genre-group.pipe';
 import { EditComponent } from './edit/edit.component';
 import { GroupDashboardComponent } from './group-dashboard/group-dashboard.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -66,7 +67,8 @@ export const firebaseConfig = {
     AvailableGroupPipe,
     GenreGroupPipe,
     EditComponent,
-    GroupDashboardComponent
+    GroupDashboardComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
