@@ -4,7 +4,7 @@
     <li class="navitems"><a class="navlinks" href="artist-search">Search Artist</a></li>
     <li class="navitems"><a class="navlinks" href="group-search">Search Group</a></li>
 
-    <div id="welcome" class="inline-block" *ngIf="this.authService.isLoggedIn()">hello, {{ displayName }}!</div>
+    <div id="welcome" class="inline-block" *ngIf="this.authService.isLoggedIn()">{{ displayName }}</div>
 
     <div *ngIf="this.authService.isLoggedIn() === false">
       <li><a class="account navlinks" routerLink="create-artist" id="email-button" type="button"><strong>SIGN UP</strong></a></li>
