@@ -35,12 +35,9 @@
   </div>
 </div>
 
-<div *ngFor="let group of groups | async | lookingForPipe:filterByLookingFor | availableGroupPipe:filterByAvailable | genreGroupPipe:filterByGenre" class="card" routerLink="../view-user/{{group.$key}}">
-  <div class="panel panel-body">
-    <div *ngIf="group.profileImage">
-      <img class="profImage" src="{{group.profileImage}}" alt="{{group.name}}'s profile image">
-    </div>
-    <h5>{{group.name}}</h5>
-    <p>{{group.tagline}}</p>
-  </div>
+<div *ngFor="let group of groups | async | lookingForPipe:filterByLookingFor | availableGroupPipe:filterByAvailable | genreGroupPipe:filterByGenre" class="card small search-result">
+  <a href="/view-group/{{group.$key}}">
+  <img class="profImage" src="{{group.profileImage}}" alt="{{group.name}}'s profile image">
+  <h5>{{group.name}}</h5>
+  <p>{{group.tagline}}</p></a>
 </div>

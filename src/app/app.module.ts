@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-//bootstrap imports
+//materialize imports
 import "materialize-css";
 import { MaterializeModule } from "angular2-materialize";
 
@@ -39,6 +39,7 @@ import { LookingForPipe } from './looking-for.pipe';
 import { AvailableGroupPipe } from './available-group.pipe';
 import { GenreGroupPipe } from './genre-group.pipe';
 import { EditComponent } from './edit/edit.component';
+import { GroupDashboardComponent } from './group-dashboard/group-dashboard.component';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -64,7 +65,8 @@ export const firebaseConfig = {
     LookingForPipe,
     AvailableGroupPipe,
     GenreGroupPipe,
-    EditComponent
+    EditComponent,
+    GroupDashboardComponent
   ],
   imports: [
     BrowserModule,

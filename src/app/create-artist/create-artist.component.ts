@@ -42,7 +42,7 @@ export class CreateArtistComponent implements OnInit {
       startDate: newGroupStartDate,
       endDate: newGroupEndDate,
       verified: false
-    }]
+    }];
     let that = this;
     let newArtist = new Artist(newName, location, this.instruments, this.genres, newTagline, newBio, this.allLookingFor, newAvailable, groups);
     newArtist.profileImage = newProfileImg;
@@ -50,13 +50,9 @@ export class CreateArtistComponent implements OnInit {
     setTimeout(function() {
       that.artistService.addArtist(newArtist, that.authService.userDetails.uid);
       that.router.navigate(['dashboard/' + this.authService.userDetails.uid]);
-    }, 1000);
+      }, 2000);
     ;
 
-  }
-  testFunc() {
-    let that = this;
-    setTimeout(function() {console.log(that.authService.userDetails.uid)}, 1000);
   }
 
   instrumentOptions = [
