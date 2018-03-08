@@ -1,12 +1,12 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, EventEmitter } from '@angular/core';
 import { AuthService } from './../services/auth.service';
 import { ArtistService } from './../services/artist.service';
 import { GroupService } from './../services/group.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { FirebaseObjectObservable } from 'angularfire2/database';
-import { MaterializeModule } from 'angular2-materialize';
-import * as $ from 'jquery';
+import { MaterializeAction } from 'angular2-materialize';
+
 
 @Component({
 	selector: 'app-dashboard',
@@ -18,26 +18,52 @@ import * as $ from 'jquery';
 export class DashboardComponent implements OnInit, AfterViewInit {
 	artistToDisplay;
 	artistId;
-	counter: number = 0;
-
+	myDate: Date;
+	messageIds:string[];
+	messageUsers;
+	modalActions = new EventEmitter<string|MaterializeAction>();
+  openModal() {
+    this.modalActions.emit({action:"modal",params:['open']});
+  }
+  closeModal() {
+    this.modalActions.emit({action:"modal",params:['close']});
+  }
 
 	constructor(private authService: AuthService, private artistService: ArtistService, private groupService: GroupService, private route: ActivatedRoute) { }
 
 	ngOnInit() {
+		this.myDate = new Date();
 		this.route.params.forEach((urlParameters) => {
       this.artistId = urlParameters['id'];
-	});
-	this.artistService.getArtistById(this.artistId).subscribe(dataLastEmmited => {
-		this.artistToDisplay = dataLastEmmited;
-		console.log(this.artistToDisplay)
-	});
-}
+		});
+		this.artistService.getArtistById(this.artistId).subscribe(dataLastEmmited => {
+			this.artistToDisplay = dataLastEmmited;
+			// console.log(this.artistToDisplay);
+		});
+	}
 
-ngAfterViewInit() {
+	ngAfterViewInit() {
 
-}
-  button() {
-    console.log()
+	}
+
+	getMessageName(uid) {
+		let name: string;
+		this.artistService.getArtistById(uid).subscribe(dataLastEmmited => {
+			name = dataLastEmmited.name;
+			console.log(name);
+		})
+		return name;
+	}
+
+	sendMessage(message) {
+    this.artistToDisplay.messages.push(
+      {
+        content: message,
+        senderId: this.authService.userDetails.uid,
+        timestamp: this.myDate.toString()
+      });
+    this.artistService.updateArtist(this.artistToDisplay);
+    // console.log(this.artistToDisplay.messages);
   }
 
 }
