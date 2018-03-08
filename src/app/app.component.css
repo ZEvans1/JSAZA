@@ -1,5 +1,5 @@
 #welcome{
-  color: #ee6e73;
+  color: rgb(240,240,240);
   height: 100%;
   text-align: center;
   float:left;
@@ -11,16 +11,15 @@
   float: right;
   height: 100%;
   display: block;
-  color: #ee6e73;
+  color: rgb(160, 160 ,160);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .navbar .account:hover{
-  color: #ee6e73;
+  color: rgb(160, 160 ,160);
 }
-
 
 .top-nav{
   /*border-bottom: 1px solid lightgrey;
@@ -35,10 +34,13 @@
   padding: 0;
   overflow: hidden;
   background-color: #424242;
+  /*background-color: #212121;*/
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 2;
+  opacity: .90;
+  border-bottom: 4px solid rgba(28,28,28, .1);
 }
 .navitems{
   float: left;
@@ -49,13 +51,14 @@
 }
 .navlinks{
   display: block;
-  color: #ee6e73;
+  color: rgb(160, 160 ,160);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 .navlinks:hover{
   background-color: #111;
+  color: rgb(200,200,200)
 }
 
 .container{
