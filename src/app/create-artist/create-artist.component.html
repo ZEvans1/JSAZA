@@ -143,12 +143,12 @@
               <option [attr.value]="soundengineer">sound-engineer</option>
             </optgroup>
           </select>
-          <p>Added Instruments:</p>
+          <!-- <p>Added Instruments:</p>
           <div *ngFor="let instrument of instruments">
             {{instrument}}
             <br>
           </div>
-          <br>
+          <br> -->
         </div>
         <div class="col s4">
           <label for="genre">Genre(s)</label>
@@ -203,12 +203,12 @@
             <option [attr.value]="vaporwave">vaporwave</option>
             <option [attr.value]="world">world</option>
           </select>
-          <p>Added Genres:</p>
+          <!-- <p>Added Genres:</p>
           <div *ngFor="let genre of genres">
             {{genre}}
             <br>
           </div>
-          <br>
+          <br> -->
         </div>
         <div class="col s4">
           <label for="LookingFor">What are you looking for?</label>
@@ -261,12 +261,12 @@
               <option [attr.value]="soundengineer">sound-engineer</option>
             </optgroup>
           </select>
-          <br>
+          <!-- <br>
           Added to Looking For:
           <div *ngFor="let lookingFor of allLookingFor">
             {{lookingFor}}
           </div>
-          <br>
+          <br> -->
         </div>
       </div>
       <h4>Gigs</h4>
@@ -301,7 +301,8 @@
           <option value="false">no</option>
           <option value="true">yes</option>
         </select>
-      <button (click)="submitForm(newName.value, newEmail.value, newPassword.value, newCity.value, newState.value, newZip.value, newTagline.value, newBio.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
+        <br>
+      <a class="btn waves-effect" (click)="submitForm(newName.value, newEmail.value, newPassword.value, newCity.value, newState.value, newZip.value, newTagline.value, newBio.value, newAvailable.value, newGroupId.value, newGroupRole.value, newGroupStartDate.value, newGroupEndDate.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)"><i class="material-icons right">play_arrow</i>create</a>
     </form>
   </div>
 </div>

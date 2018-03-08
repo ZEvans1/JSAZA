@@ -61,3 +61,12 @@
   font-size: 125%;
   padding: 0px;
 }
+
+#groups{
+  color: black;
+}
+
+#genres{
+  color: black;
+  font-weight: bold;
+}

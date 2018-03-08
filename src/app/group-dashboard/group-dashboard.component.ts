@@ -20,6 +20,7 @@ export class GroupDashboardComponent implements OnInit {
   constructor(private authService: AuthService, private groupService: GroupService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    
     this.route.params.forEach((urlParameters) => {
       this.groupId = urlParameters['id'];
     });

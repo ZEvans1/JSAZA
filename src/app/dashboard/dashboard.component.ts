@@ -72,7 +72,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         senderId: that.authService.userDetails.uid,
         timestamp: that.myDate.toString()
       });
-    this.artistService.updateArtist(this.artistToDisplay, this.authService.userDetails.uid);
+    this.artistService.updateArtist(this.artistToDisplay, this.artistToDisplay.$key);
     // console.log(this.artistToDisplay.messages);
   }
 

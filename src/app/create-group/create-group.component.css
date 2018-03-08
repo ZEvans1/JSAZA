@@ -1,0 +1,13 @@
+.snap {
+  background-color: #424242;
+  padding: 10px;
+  height: 1300px;
+}
+
+h1  {
+  text-align: center;
+}
+
+#addMemberButton {
+  margin-top: 40px;
+}
