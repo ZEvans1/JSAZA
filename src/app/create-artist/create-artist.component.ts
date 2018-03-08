@@ -54,10 +54,6 @@ export class CreateArtistComponent implements OnInit {
     ;
 
   }
-  testFunc() {
-    let that = this;
-    setTimeout(function() {console.log(that.authService.userDetails.uid)}, 1000);
-  }
 
   instrumentOptions = [
     {value: "acoustic-guitar", name:"acoustic-guitar"},
