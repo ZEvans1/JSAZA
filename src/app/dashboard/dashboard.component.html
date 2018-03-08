@@ -2,61 +2,60 @@
   dashboard works!
 </p>
 <a class="waves-effect waves-light btn" (click)="this.authService.logout()">logout <i class="material-icons">stop</i></a> -->
-
-<div class="row" *ngIf="artistToDisplay.name">
-  <div class="card large col l4">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator pImage" src="{{artistToDisplay.profileImage}}">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">{{artistToDisplay.name}}<i class="material-icons right">more_vert</i></span>
-      <hr>
-      <p><small>{{artistToDisplay.tagline}}</small></p>
-      <p>
-        <small>-{{artistToDisplay.location.city}}, {{artistToDisplay.location.state}}</small>
-      </p>
-      <a id="messageButton" class="waves-effect waves-light btn"><i class="material-icons right">email</i>message</a>
-
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">{{artistToDisplay.name}}<i class="material-icons right">close</i></span>
-      <hr>
-      <p>{{artistToDisplay.bio}}</p>
-    </div>
-  </div>
-
-  <div class="card large col l8">
-    <div class="card-content">
-    </div>
-    <div class="card-tabs">
-      <ul class="tabs tabs-fixed-width grey darken-3">
-        <li class="tab"><a class="active" href="#instruments">Instruments</a></li>
-        <li class="tab"><a href="#groups">Groups</a></li>
-        <li class="tab"><a href="#genres">Genres</a></li>
-      </ul>
-    </div>
-    <div class="card-content grey">
-      <div id="instruments">
-        <p *ngFor="let instrument of artistToDisplay.instruments">
-          <img height="100px" style="float: left; padding: 10px" src="./../../assets/instrument-icons/{{instrument}}.png" alt="{{instrument}}" title="{{instrument}}">
-        </p>
+  <div class="row" >
+    <div class="card large col l4">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator pImage" src="{{artistToDisplay.profileImage}}">
       </div>
-      <div id="groups">
-        <ul>
-          <li *ngFor="let group of artistToDisplay.groups">{{group.name}} - {{group.role}}</li>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{artistToDisplay.name}}<i class="material-icons right">more_vert</i></span>
+        <hr>
+        <p><small>{{artistToDisplay.tagline}}</small></p>
+        <p>
+          <small>-{{artistToDisplay.location.city}}, {{artistToDisplay.location.state}}</small>
+        </p>
+        <a id="messageButton" class="waves-effect waves-light btn"><i class="material-icons right">email</i>message</a>
+
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{artistToDisplay.name}}<i class="material-icons right">close</i></span>
+        <hr>
+        <p>{{artistToDisplay.bio}}</p>
+      </div>
+    </div>
+
+    <div class="card large col l8">
+      <div class="card-content">
+      </div>
+      <div class="card-tabs">
+        <ul class="tabs tabs-fixed-width grey darken-3">
+          <li class="tab"><a class="active" href="#instruments">Instruments</a></li>
+          <li class="tab"><a href="#groups">Groups</a></li>
+          <li class="tab"><a href="#genres">Genres</a></li>
         </ul>
       </div>
+      <div class="card-content grey">
+        <div id="instruments">
+          <p *ngFor="let instrument of artistToDisplay.instruments">
+            <img height="100px" style="float: left; padding: 10px" src="./../../assets/instrument-icons/{{instrument}}.png" alt="{{instrument}}" title="{{instrument}}">
+          </p>
+        </div>
+        <div id="groups">
+          <ul>
+            <li *ngFor="let group of artistToDisplay.groups">{{group.name}} - {{group.role}}</li>
+          </ul>
+        </div>
 
-      <div id="genres">
-        <div class="genreDiv" *ngFor="let genre of artistToDisplay.genres">{{genre}}</div>
+        <div id="genres">
+          <div class="genreDiv" *ngFor="let genre of artistToDisplay.genres">{{genre}}</div>
+        </div>
+
       </div>
-
     </div>
   </div>
+<!-- </div> -->
 
-
-</div>
-<div class="row" *ngIf="groupToDisplay.name">
+<!-- <div class="row" *ngIf="groupToDisplay.name">
   <div class="card large col l4">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="{{groupToDisplay.profileImage}}">
@@ -106,6 +105,4 @@
 
     </div>
   </div>
-
-
-</div>
+</div> -->
