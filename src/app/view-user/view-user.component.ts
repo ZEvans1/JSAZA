@@ -37,15 +37,6 @@ export class ViewUserComponent implements OnInit {
    })
   }
 
-  sendPrivateMessage(message) {
-    this.artistToDisplay.messages.push(
-      {
-        content: message,
-        senderId: this.authService.userDetails.uid,
-        timestamp: this.myDate.toString()
-      });
-    this.artistService.updateArtist(this.artistToDisplay);
-    console.log(this.artistToDisplay.messages);
-  }
+
 
 }
