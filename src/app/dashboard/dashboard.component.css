@@ -22,3 +22,7 @@
 .card-reveal {
   background-color: #729395;
 }
+.pImage {
+  position: relative;
+  z-index: 1;
+}
