@@ -30,4 +30,11 @@ after `npm install` copy your firebase database settings into a file titled `src
 
 `};`
 
+##TO DO:
+* Recommendation system/I'm Feeling Lucky -- shows the user a random other user with similar interests
+* Search by Location
+* Private Messaging
+* More robust editing controls for user accounts
+* User submitted genres, instruments
+
 Copyright(c) JSAZA 2018
