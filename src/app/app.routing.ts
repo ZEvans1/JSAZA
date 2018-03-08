@@ -9,6 +9,7 @@ import { SearchComponent } from './search/search.component';
 import { GroupSearchComponent } from './group-search/group-search.component'
 import { EditComponent } from './edit/edit.component';
 import { GroupDashboardComponent } from './group-dashboard/group-dashboard.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const appRoutes: Routes = [
   {
@@ -54,6 +55,10 @@ const appRoutes: Routes = [
   {
     path:'view-group/:id',
     component: GroupDashboardComponent
+  },
+  {
+    path:'welcome',
+    component: WelcomeComponent
   }
 
 ];
