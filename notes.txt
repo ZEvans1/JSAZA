@@ -7,38 +7,32 @@ Login Component:
 -typeError: cannot read property 'uid' of null error
 
 Navbar:
--delete create group
--delete sign up in so that user has to choose on login page whether to create and artist or a band
+
 
 Forms:
 -create artist
   - submit/create button bigger and maybe centered (or full width)
-  - remove testfunc()
-  - fix background
 -create group
   -make it look like create artist
 
 Search:
--card consistency across search types
--formatting
+-add instruments and genres cases to pipes
 
 Dashboard:
 -formatting
--everything showing up when linking from login or from search
--missing message button in some sizes
+-group dashboard needs to look like artist dashboard
 
 Groups:
 -associate an artist with a group (add/remove)
 
 Messaging:
--need component and everything
-
-Other:
--add more instrument types
--add more genres
+-fixing formatting to make it pretty
+-maybe group by userId if time
 
 
 Future Features:
 -features we haven't thought about
 -listening to
 -influences
+-reply messages
+-private messages
