@@ -1,10 +1,15 @@
-body {
+body{
   /*background: linear-gradient(to top right, #000D28, #2C3F6A);*/
   /*background: linear-gradient(to top right, #000D28, rgb(80,80,90));*/
   background: linear-gradient(bottom, #000D28, #424242);
-  height: 100vh;
+  /*height: 100vh;*/
+  color: rgb(175, 175, 175);
 }
 
 /*ul.dropdown-content.select-dropdown li span {
     color: #ee6e73;
 }*/
+
+button{
+  color: rgb(20, 20, 20);
+}
