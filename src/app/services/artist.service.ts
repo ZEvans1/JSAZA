@@ -46,8 +46,8 @@ export class ArtistService {
     return this.database.object('artists/' + artistId);
   }
 
-  updateArtist(localUpdatedArtist) {
-    let artistInFirebase = this.getArtistById(localUpdatedArtist.$key);
+  updateArtist(localUpdatedArtist, uid: string) {
+    let artistInFirebase = this.getArtistById(uid);
     artistInFirebase.update({
       name: localUpdatedArtist.name,
       location: localUpdatedArtist.location,

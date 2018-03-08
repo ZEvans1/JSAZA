@@ -1,0 +1,98 @@
+<h1>Thanks for Deciding to Join!</h1>
+<form materialize class="col s12">
+  <div class="row">
+    <h4>Personal Info</h4>
+    <div class="col s4">
+      <label for="Name">Name</label>
+      <input type="text" value="Test User" #newName [value]="groupToEdit.name">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s4">
+      <label for="Location">City</label>
+      <input required type="text" value="Portland" #newCity [value]="groupToEdit.city">
+    </div>
+    <div class="col s4">
+      <label for="Location">State</label>
+      <input required type="text" value="Oregon" #newState [value]="groupToEdit.state">
+    </div>
+    <div class="col s4">
+      <label for="Location">Zip</label>
+      <input required type="text" value="97204" #newZip [value]="groupToEdit.zip">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s4">
+      <label for="Tagline">Tagline</label>
+      <textarea value="Tagline" class="materialize-textarea" data-length="60" required type="text" value="Tagline" #newTagline [value]="groupToEdit.tagline"></textarea>
+    </div>
+    <div class="col s8">
+      <label for="Bio">Bio</label>
+      <textarea class="materialize-textarea" required value="Bio" #newBio [value]="groupToEdit.bio"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <h4>Music Profile</h4>
+    <div class="col s3">
+      <label for="Members">Members</label>
+      <input type="text" value="member" #currentMember>
+      <button (click)="addNewMember(currentMember.value)">Add Another Member</button>
+    </div>
+    <div class="col s3">
+      <div *ngFor="let member of members">
+        {{member}}
+        <br>
+      </div>
+    </div>
+    <div class="col s3">
+      <label for="genre">Genre(s)</label>
+      <select name="genre" [(ngModel)]="genres" multiple materialize="material_select">
+        <option value="" disabled selected>Choose Genre(s)</option>
+        <option [attr.value]="rock">rock</option>
+        <option [attr.value]="jazz">jazz</option>
+        <option [attr.value]="classical">classical</option>
+        <option [attr.value]="country">country</option>
+        <option [attr.value]="pop">pop</option>
+      </select>
+      <p>Added Genres:</p>
+      <div *ngFor="let genre of genres">
+        {{genre}}
+        <br>
+      </div>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s6">
+      <label for="LookingFor">What are you looking for?</label>
+      <select name="lookingFor" [(ngModel)]="allLookingFor" multiple materialize="material_select">
+        <option value="" disabled selected>What are you looking for?</option>
+        <option [attr.value]="guitar">guitar</option>
+        <option [attr.value]="bass">bass</option>
+        <option [attr.value]="keyboard">keyboard</option>
+        <option [attr.value]="drums">drums</option>
+        <option [attr.value]="vocals">vocals</option>
+      </select>
+      <br>
+      Added to Looking For:
+      <div *ngFor="let lookingFor of allLookingFor">
+        {{lookingFor}}
+      </div>
+    </div>
+    <div class="col s6">
+      <label for="Available">Available</label>
+      <input type="text" [value]="groupToEdit.available" #newAvailable>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="imageURL">Profile image url</label>
+    <input type="text" [value]="groupToEdit.profileImage" #newProfileImg>
+  </div>
+  <div class="form-group">
+    <label for="gallery">Gallery img urls</label>
+    <input type="text" value="galleryURLone" #newGalleryURL1>
+    <input type="text" value="galleryURLtwo" #newGalleryURL2>
+    <input type="text" value="galleryURLthree" #newGalleryURL3>
+  </div>
+  <button (click)="submitForm(newName.value, newCity.value, newState.value, newZip.value, newTagline.value, newBio.value, newAvailable.value, newProfileImg.value, newGalleryURL1.value, newGalleryURL2.value, newGalleryURL3.value)">create</button>
+</form>
