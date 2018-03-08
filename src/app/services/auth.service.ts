@@ -36,11 +36,6 @@ export class AuthService {
 		return this.firebaseAuth.auth.signInWithEmailAndPassword(email, password);
 	}
 
-	signInWithGoogle() {
-		return this.firebaseAuth.auth.signInWithPopup(
-			new firebase.auth.GoogleAuthProvider()
-		)
-	}
 
 	isLoggedIn() {
 		if (this.userDetails == null) {

@@ -42,6 +42,7 @@ import { EditComponent } from './edit/edit.component';
 import { GroupDashboardComponent } from './group-dashboard/group-dashboard.component';
 import { GroupEditComponent } from './group-edit/group-edit.component';
 
+
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
 	authDomain: masterFirebaseConfig.authDomain,
@@ -69,6 +70,7 @@ export const firebaseConfig = {
     EditComponent,
     GroupDashboardComponent,
     GroupEditComponent
+
   ],
   imports: [
     BrowserModule,

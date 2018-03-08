@@ -32,6 +32,15 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 	constructor(private authService: AuthService, private artistService: ArtistService, private groupService: GroupService, private route: ActivatedRoute) { }
 
 	ngOnInit() {
+		if( window.localStorage ) {
+			if( !localStorage.getItem('firstLoad') )
+			{
+				localStorage['firstLoad'] = true;
+				window.location.reload();
+			}
+			else
+				localStorage.removeItem('firstLoad');
+		}
 		this.myDate = new Date();
 		this.route.params.forEach((urlParameters) => {
       this.artistId = urlParameters['id'];

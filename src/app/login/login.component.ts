@@ -35,7 +35,9 @@ export class LoginComponent implements OnInit {
 		this.authService.createAccount(this.user.email, this.user.password)
 			.then((res) => {
 				console.log(res);
-				this.router.navigate(['dashboard/' + this.authService.userDetails.uid]);
+				setTimeout(() => {
+					this.router.navigate(['dashboard/' + this.authService.userDetails.uid]);
+				}, 500);
 			})
 			.catch((err) => alert(err));
 	}
@@ -44,8 +46,9 @@ export class LoginComponent implements OnInit {
 		this.authService.signInRegular(this.user.email, this.user.password)
 			.then((res) => {
 				console.log(res);
-
-				this.router.navigate(['dashboard/' + this.authService.userDetails.uid]);
+				setTimeout(() => {
+					this.router.navigate(['dashboard/' + this.authService.userDetails.uid]);
+				}, 500);
 			})
 			.catch((err) => alert(err));
 	}
