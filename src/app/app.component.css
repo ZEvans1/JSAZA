@@ -33,13 +33,14 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+  /*background: linear-gradient(#000D29, #424242);*/
+  /*#000D29, #424242 */
   background-color: #424242;
-  /*background-color: #212121;*/
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 2;
-  opacity: .90;
+  /*opacity: .90;*/
   border-bottom: 4px solid rgba(28,28,28, .1);
 }
 .navitems{
