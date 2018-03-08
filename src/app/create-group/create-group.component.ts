@@ -48,8 +48,10 @@ export class CreateGroupComponent implements OnInit {
     newGroup.gallery = [newGalleryURL1, newGalleryURL2, newGalleryURL3];
     setTimeout(function() {
       that.groupService.addGroup(newGroup, that.authService.userDetails.uid);
-      that.router.navigate(['dashboard']);
-      }, 2000);
+    }, 1000);
+    setTimeout(function(){
+      that.router.navigate(['dashboard/' + this.authService.userDetails.uid]);
+    }, 1200);
     ;
 
   }

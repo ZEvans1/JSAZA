@@ -2,24 +2,30 @@ Stuff to do:
 
 Login Component:
 -styling
+  -buttons same shape
+  -create buttons same size and padding
 -typeError: cannot read property 'uid' of null error
 
 Navbar:
 -delete create group
+-delete sign up in so that user has to choose on login page whether to create and artist or a band
 
 Forms:
--switches
--formatting
+-create artist
+  - submit/create button bigger and maybe centered (or full width)
+  - remove testfunc()
+  - fix background
+-create group
+  -make it look like create artist
 
 Search:
 -card consistency across search types
 -formatting
 
 Dashboard:
--layout
 -formatting
 -everything showing up when linking from login or from search
--image needs z distance so it goes behind navbar
+-missing message button in some sizes
 
 Groups:
 -associate an artist with a group (add/remove)
@@ -36,4 +42,3 @@ Future Features:
 -features we haven't thought about
 -listening to
 -influences
--

@@ -1,5 +1,5 @@
 export class Group {
-  profileImage: string = "";
+  profileImage: string = "https://image.flaticon.com/icons/svg/32/32441.svg";
   gallery: string[] = [""];
   test: false;
   messages: Object[] = [
