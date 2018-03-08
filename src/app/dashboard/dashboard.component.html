@@ -3,7 +3,7 @@
 </p>
 <a class="waves-effect waves-light btn" (click)="this.authService.logout()">logout <i class="material-icons">stop</i></a> -->
 
-<div class="row">
+<div class="row" *ngIf="artistToDisplay.name">
   <div class="card large col l4">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator pImage" src="{{artistToDisplay.profileImage}}">
@@ -49,6 +49,59 @@
 
       <div id="genres">
         <div class="genreDiv" *ngFor="let genre of artistToDisplay.genres">{{genre}}</div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+<div class="row" *ngIf="groupToDisplay.name">
+  <div class="card large col l4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{groupToDisplay.profileImage}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{groupToDisplay.name}}<i class="material-icons right">more_vert</i></span>
+      <hr>
+      <p><small>{{groupToDisplay.tagline}}</small></p>
+      <p>
+        <small>-{{groupToDisplay.location.city}}, {{groupToDisplay.location.state}}</small>
+      </p>
+      <a id="messageButton" class="waves-effect waves-light btn"><i class="material-icons right">email</i>message</a>
+
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{groupToDisplay.name}}<i class="material-icons right">close</i></span>
+      <hr>
+      <p>{{groupToDisplay.bio}}</p>
+    </div>
+  </div>
+
+  <div class="card large col l8">
+    <div class="card-content">
+    </div>
+    <div class="card-tabs">
+      <ul class="tabs tabs-fixed-width grey darken-3">
+        <li class="tab"><a class="active" href="#lookingFor">Looking For</a></li>
+        <li class="tab"><a href="#members">Members</a></li>
+        <li class="tab"><a href="#genres">Genres</a></li>
+      </ul>
+    </div>
+    <div class="card-content grey">
+      <div id="lookingFor">
+        <p *ngFor="let lookingFor of groupToDisplay.lookingFor">
+          <img height="100px" style="float: left; padding: 10px" src="./../../assets/instrument-icons/{{lookingFor}}.png" alt="{{lookingFor}}" title="{{lookingFor}}">
+        </p>
+      </div>
+      <div id="members">
+        <ul>
+          <li *ngFor="let member of groupToDisplay.members">{{member.name}} - {{member.role}}</li>
+        </ul>
+      </div>
+
+      <div id="genres">
+        <div class="genreDiv" *ngFor="let genre of groupToDisplay.genres">{{genre}}</div>
       </div>
 
     </div>
