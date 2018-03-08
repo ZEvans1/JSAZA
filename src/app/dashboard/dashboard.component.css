@@ -12,11 +12,26 @@
   display: block;
   margin-top: 5px;
   background-color: #424242;
-  color: #ee6e73;
+  /*color: #ee6e73;*/
+  color: #FFFFFF;
+}
+
+.row{
+  height: auto;
 }
 
 .card {
-  background-color: #758897;
+  background-color: rgba(85,85,85,.85);
+  height: 100%;
+}
+
+#cardTabs {
+  height: 100%;
+}
+
+.card-title{
+  font-weight: bold;
+  color: #cccccc;
 }
 
 .card-reveal {
@@ -25,4 +40,23 @@
 .pImage {
   position: relative;
   z-index: 1;
+}
+
+.tabs {
+  background-color: #424242;
+  color: white;
+}
+
+.tabs .tab a{
+  color: rgb(160, 160 ,160);
+}
+
+.tabs .tab a:hover{
+  color: rgb(255,255,255);
+}
+
+.card .card-content p{
+  color: #ccccff;
+  font-size: 125%;
+  padding: 0px;
 }
