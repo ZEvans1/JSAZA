@@ -1,6 +1,7 @@
 body {
   background: linear-gradient(to top right, #000D28, #2C3F6A);
   height: 100vh;
+  color: #ee6e73;
 }
 
 ul.dropdown-content.select-dropdown li span {
