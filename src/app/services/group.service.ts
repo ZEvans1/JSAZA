@@ -11,8 +11,6 @@ export class GroupService {
   groups: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase, private authService: AuthService) {
-
-
     this.groups = database.list('groups');
   }
 

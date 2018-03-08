@@ -12,6 +12,7 @@ export class GroupSearchComponent implements OnInit {
   groups;
   filterByLookingFor: string = "all";
   filterByAvailable: string = "all";
+  filterByGenre: string = "all";
   constructor(private authService: AuthService, private groupService: GroupService) { }
 
   ngOnInit() {
@@ -24,6 +25,10 @@ export class GroupSearchComponent implements OnInit {
 
   onChangeAvailable(optionFromMenu) {
     this.filterByAvailable = optionFromMenu;
+  }
+
+  onChangeGenre(optionFromMenu) {
+    this.filterByGenre = optionFromMenu;
   }
 
 }
