@@ -35,8 +35,9 @@
 </div>
 </div>
 
-  <div *ngFor="let artist of artists | async | instrumentPipe:filterByInstrument | genrePipe:filterByGenre | availablePipe:filterByAvailable" class="card small search-result" routerLink="../view-user/{{artist.$key}}">
+  <div *ngFor="let artist of artists | async | instrumentPipe:filterByInstrument | genrePipe:filterByGenre | availablePipe:filterByAvailable" class="card small search-result" >
+    <a href="/view-user/{{artist.$key}}">
     <img class="profImage" src="{{artist.profileImage}}" alt="{{artist.name}}'s profile image'">
     <h5>{{artist.name}} </h5>
-    <p>{{artist.tagline}}</p>
+    <p>{{artist.tagline}}</p></a>
   </div>
