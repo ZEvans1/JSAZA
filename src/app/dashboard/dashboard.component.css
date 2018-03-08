@@ -38,6 +38,7 @@
   background-color: #424242;
 }
 .pImage {
+  padding-top: 10px;
   position: relative;
   z-index: 1;
 }
