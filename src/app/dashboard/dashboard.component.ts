@@ -38,15 +38,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 		});
 		this.artistService.getArtistById(this.artistId).subscribe(dataLastEmmited => {
 			this.artistToDisplay = dataLastEmmited;
-			console.log(this.artistToDisplay);
+			// console.log(this.artistToDisplay);
 		});
-		for(var i = 0; i < this.artistToDisplay.messages.length; i++) {
-			this.artistService.getArtistById(this.artistToDisplay.messages[i]).subscribe(dataLastEmmited => {
-				console.log("bam");
-				this.messageUsers[i] = dataLastEmmited;
-				console.log(this.messageUsers[i]);
-			})
-		}
 	}
 
 	ngAfterViewInit() {
@@ -61,9 +54,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 		})
 		return name;
 	}
-  button() {
-    console.log()
-  }
 
 	sendMessage(message) {
     this.artistToDisplay.messages.push(
@@ -73,7 +63,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         timestamp: this.myDate.toString()
       });
     this.artistService.updateArtist(this.artistToDisplay);
-    console.log(this.artistToDisplay.messages);
+    // console.log(this.artistToDisplay.messages);
   }
 
 }
