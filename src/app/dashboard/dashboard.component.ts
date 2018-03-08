@@ -50,17 +50,18 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 		let name: string;
 		this.artistService.getArtistById(uid).subscribe(dataLastEmmited => {
 			name = dataLastEmmited.name;
-			console.log(name);
+			// console.log(name);
 		})
 		return name;
 	}
 
 	sendMessage(message) {
+		let that = this;
     this.artistToDisplay.messages.push(
       {
         content: message,
-        senderId: this.authService.userDetails.uid,
-        timestamp: this.myDate.toString()
+        senderId: that.authService.userDetails.uid,
+        timestamp: that.myDate.toString()
       });
     this.artistService.updateArtist(this.artistToDisplay);
     // console.log(this.artistToDisplay.messages);
