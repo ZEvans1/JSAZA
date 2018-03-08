@@ -1,0 +1,18 @@
+.card{
+  padding-top: 0;
+  margin-top: 2%;
+  background-color: #ecf2f9;
+  text-align: center;
+  width: 20vh;
+  float: left;
+  margin: 15px;
+  overflow: auto;
+}
+
+.card:hover{
+  border: 2px solid yellow;
+}
+
+.profImage{
+  height: 15vh;
+}
