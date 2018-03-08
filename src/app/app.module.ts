@@ -29,7 +29,6 @@ import { CreateArtistComponent } from './create-artist/create-artist.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { SearchComponent } from './search/search.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
-import { WelcomeComponent } from './welcome/welcome.component';
 
 //pipes
 import { InstrumentPipe } from './instrument.pipe';
@@ -70,8 +69,7 @@ export const firebaseConfig = {
     GenreGroupPipe,
     EditComponent,
     GroupDashboardComponent,
-    GroupEditComponent,
-		WelcomeComponent
+    GroupEditComponent
   ],
   imports: [
     BrowserModule,
