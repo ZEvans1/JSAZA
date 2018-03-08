@@ -202,7 +202,7 @@
         </div>
       </div>
       <div class="col s4">
-        <a id="addMemberButton" class="btn waves-effect" (click)="addNewMember(currentMember.value)">Add Member</a>
+        <a id="addMemberButton" class="btn waves-effect" (click)="addNewMember(currentMember.value); currentMember.value='';">Add Member</a>
       </div>
     </div>
     <div class="row">

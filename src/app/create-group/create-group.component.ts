@@ -42,16 +42,15 @@ export class CreateGroupComponent implements OnInit {
       state: newState,
       zip: newZip
     };
-    let that = this;
     let newGroup = new Group(newName, location, this.genres, this.members, newTagline, newBio, this.allLookingFor, newAvailable);
     newGroup.profileImage = newProfileImg;
     newGroup.gallery = [newGalleryURL1, newGalleryURL2, newGalleryURL3];
-    setTimeout(function() {
-      that.groupService.addGroup(newGroup, that.authService.userDetails.uid);
-    }, 1000);
-    setTimeout(function(){
-      that.router.navigate(['dashboard/' + this.authService.userDetails.uid]);
-    }, 1200);
+    setTimeout(() => {
+      this.groupService.addGroup(newGroup, this.authService.userDetails.uid);
+    }, 2000);
+    setTimeout(() => {
+      this.router.navigate(['/group-dashboard/' + this.authService.userDetails.uid]);
+    }, 2500);
     ;
 
   }
