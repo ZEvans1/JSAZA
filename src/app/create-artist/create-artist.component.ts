@@ -36,13 +36,13 @@ export class CreateArtistComponent implements OnInit {
       state: newState,
       zip: newZip
     };
-    let groups = {
+    let groups = [{
       name: newGroupId,
       role: newGroupRole,
       startDate: newGroupStartDate,
       endDate: newGroupEndDate,
       verified: false
-    }
+    }]
     let that = this;
     let newArtist = new Artist(newName, location, this.instruments, this.genres, newTagline, newBio, this.allLookingFor, newAvailable, groups);
     newArtist.profileImage = newProfileImg;
