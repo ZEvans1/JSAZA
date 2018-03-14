@@ -37,4 +37,12 @@ after `npm install` copy your firebase database settings into a file titled `src
 * More robust editing controls for user accounts
 * User submitted genres, instruments
 
+##TECHNOLOGIES USED:
+* Angular
+* Materialize
+* CSS
+* JavaScript
+* TypeScript
+* HTML
+
 Copyright(c) JSAZA 2018
