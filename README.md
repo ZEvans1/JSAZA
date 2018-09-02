@@ -5,16 +5,20 @@
 JSAZA is a social media platform for connecting local musicians and music enthusiasts.
 
 ## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Install Angular CLI
+* Open a terminal window
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+* Install Angular CLI
+* Open a terminal window
+* Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Installation instructions
-
-after `npm install` copy your firebase database settings into a file titled `src/environments/api-keys.ts` under `export var masterFirebaseConfig = {`
+* CLone this project
+* Run `npm install` in the project directory 
+* Create a file called api-keys.ts in this location: `src/environments`
+* Copy your firebase database settings into api-keys.ts and declare it as `export var masterFirebaseConfig = {`
 
   `apiKey: "{your-api-key}",`
 
